@@ -1,0 +1,42 @@
+baseURL = "https://lucky-money.lab798.com/"
+ignoreFiles = [ "\\.files/README.md$",  ]
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "AKO2020 - Lucky Money"
+theme = "hugo-theme-learn"
+uglyurls = false
+sectionPagesMenu = "main"
+relativeURLs = true
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+editURL = "https://github.com/joeshi/ako2020-lucky-money/edit/master/content/"
+themeVariant = "mine"
+showVisitedLinks = false
+author = "Joe SHI<qiaoshi@amazon.com>"
+description = "Learn how to build AR web application using Amazon Sumerian, AWS Amplify"
+disableSearch = false
+disableAssetsBusting = false
+disableShortcutsTitle = true
+branch = "master"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "tango"
+
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Project"
+url = "https://github.com/joeshi/ako2020-lucky-money"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-envelope'></i> Have questions?"
+url = "https://github.com/joeshi/ako2020-lucky-money/issues"
+weight = 40
+
+[outputs]
+home = [ "HTML", "JSON"]
+page = [ "HTML" ]
