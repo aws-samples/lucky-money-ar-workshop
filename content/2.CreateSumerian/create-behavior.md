@@ -8,7 +8,7 @@ weight: 22
 
 ## Add Assets Action Behaviors 
 
-###  Red Packet 
+####  Red Packet 
 1. Click the "box" entity and click **Add Component**, choose **State Machine**.    
    ![](/image/WechatIMG7.png)   
    
@@ -40,7 +40,7 @@ weight: 22
 1. Click the **wait for click** state and drag a line to **hide** state     
    ![](/image/WechatIMG18.png)
 
-### Red Packet with Money 
+#### Red Packet with Money 
 
 1. Click the **box with money** entity.   
 
@@ -61,7 +61,7 @@ weight: 22
 
 1. Click the **listen** state and drag a line to **show** state   
 
-### Money 
+#### Money 
 1. Repeat the **Red Packet with Money Behavior** 3 times for the 3 money entities.
 
 ## Config Default Hidden

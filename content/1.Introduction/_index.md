@@ -12,7 +12,7 @@ Otherwise, it's highly recommended for you to do the overall understanding and t
 
 ## Use Scenario 
 
-This workshop will deliver an application for end users to do AR scanning to get red packets and share red packets with each other, whose profit model is mobile online advertising. 
+This workshop will deliver an application for end users to do AR scanning to earn red packets and share red packets with each other, whose profit model is mobile online advertising. 
 
 There are two types of roles in this scenario, advertisers and users.
 
@@ -41,13 +41,15 @@ In our workshop, so sorry but this step is skipped : )  However, we will still b
 * Uses open red packet after matching scanning to get a random number of money
 * Users be able to choose to share the red packet with friends 
 * Friends split the shared red packet with each one getting a random number yet total amount being 2 USD.
-* Who's the luckiest guy ranking dashboard in real time
+* Calculations for random number for each packet and the total number per user gets.
+* Real time dashboard for players total amount ranking
 
 
 ## Technical Requirements
 * Develop a Web application using modern toolsets
 * Simple, re-usable APIs
 * AR integration with the application
+* High speed and Low latency database
 
 
 

@@ -6,7 +6,7 @@ weight: 12
 
 To begin, you will need to login to your AWS account and set the Cloud9 environment.
 
-{{% notice note %}}
+{{% notice tip %}}
 AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. 
 {{% /notice  %}}
 

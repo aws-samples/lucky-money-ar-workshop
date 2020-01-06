@@ -18,6 +18,7 @@ weight: 13
 ![](/image/8th-wall-gettingstarted-new-project-info.jpg)
 
 ## Upload image target to 8th Wall
+
 1. Click the Image Target icon in the left navigation or the "Manage Image Targets" link on the Project Dashboard.
 ![](/image/8th-wall-console-appkey-imagetargets.jpg)
 

@@ -10,7 +10,7 @@ To finish the workshop successfully, you will need:
 
 1. **[GitHub account](https://github.com/)** for folk codes     
 2. **AWS account** for resources to build the application    
-3. **Verify if [8th wall]((https://www.8thwall.com/)) supports your mobile phone** as the AR integration in the application is achieve via 8th wall.. The detailed requirement is listed below.    
+3. **Verify if [8th wall]((https://www.8thwall.com/)) supports your mobile phone** as the AR integration in the application is achieve via 8th wall. The detailed requirement is listed below.    
 
 
 ## Requirement on mobile phones
