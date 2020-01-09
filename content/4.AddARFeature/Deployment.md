@@ -48,13 +48,19 @@ We have create the AWS backend using Amplify CLI. Now we only use the AWS Amplif
 1. **Unselect** the checkbox before **Deploy updates to backend resources with your frontend on every code commit**
 ![](/images/addAR/amplify_ignore_backend.png)
 1. Click **Next** button, and click **Save and deploy** button to start deployment
+1. After the deployment started, click the **Rewrites and redirects** on the left bar, Click **Edit**
+1. Edit the existing rule or create a new one if there is no default
+  * **Source address**: `</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>`
+  * **Target address**: `/index.html`
+  * **Type**: `200(Rewrite)`
+![](/images/addAR/amplify_rewrites.png)
 
 The deployment will take a few minutes to complete. You can find the link under **Domain**.
 ![](/images/addAR/amplify_link.png)
 
 ## Troubleshooting
 
-You may encounter the following building error. Follow the error message and click the **Re-authenticate app** button will not fix this issue.
+You may encounter the following building error. Follow the error message and click the **Re-authenticate app** button will **NOT** fix this issue.
 ![](/images/addAR/amplify_build_error.png)
 
 Follow the steps to fix this issue:
