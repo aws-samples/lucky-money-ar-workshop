@@ -20,6 +20,7 @@ weight: 21
 ## Create Sumerian Entity
 
 1. In the assets panel, click file icon and choose the template file **template-bundle.zip** we prepare to upload **without unzipping** it. The zip file contains images of package and money. 
+    {{%attachments title="Download Link:" /%}}
    ![](/image/WechatIMG5.png)
    > If you see any errors, please double check you are uploading **ZIP file** directly instead of unzipping files.
 

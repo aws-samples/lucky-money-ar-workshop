@@ -37,8 +37,21 @@ weight: 22
 1. In the channel, enter **showMoney**      
    ![](/image/WechatIMG23.png)
 
-1. Click the **wait for click** state and drag a line to **hide** state     
-   ![](/image/WechatIMG18.png)
+1. Add another action **Execute Script**. Click the **+** button to add script, choose **Custom (Legacy Format)**. 
+    ![](/image/script-create-script.png)
+
+    ![](/image/script-choose-type.png)
+
+1. Click the **pencil** button to edit script, copy the following codes into the function `enter`, then save the change.
+    ```javascript
+	window.postMessage('sumerian-open-packet','*');
+	ctx.transitions.success();
+    ```
+    ![](/image/script-edit-script.png)
+    ![](/image/script-save-change.png)
+
+1. Click the **wait for click** state, drag a line to **hide** state, and drag a line back to **wait for click** state.   
+   ![](/image/script-drag-line.png)
 
 #### Red Packet with Money 
 
@@ -54,6 +67,8 @@ weight: 22
 
 1. Find **Listen** and click **Add**    
    ![](/image/WechatIMG24.png)
+
+1. In the channel, enter **showMoney**
     
 1. Click **Add State** and name it **show**    
 
@@ -64,9 +79,43 @@ weight: 22
 #### Money 
 1. Repeat the **Red Packet with Money Behavior** 3 times for the 3 money entities.
 
+#### Share Button
+
+1. Click the **Share Btn** entity, create **State Machine**.
+
+1. Click **+** button to add a new behavior, the repeat the steps **Red Packet with Money Behavior**.
+    ![](/image/share-button-first-behavior.png)
+
+1. Create another behavior, name both the behavior name and the state name **ListenForClickShare**.
+    ![](/image/share-button-behaviors.png)
+
+1. Add Action **Click/Tap on entity**.
+
+1. Create another state, name it **ExeShareScript**.
+
+1. Add another action **Execute Script**. Click the **+** button to add script, choose **Custom (Legacy Format)**. 
+
+1. Click the **pencil** button to edit script, copy the following codes into the function `enter`, then save the change.
+    ```javascript
+	window.postMessage('sumerian-share-packet','*');
+	ctx.transitions.success();
+    ```
+    ![](/image/share-button-save-script.png)
+
+1. Click the **ListenForClickShare** state, drag a line to **ExeShareScript** state, and drag a line back to **ListenForClickShare** state.
+    ![](/image/share-button-state-machine.png)
+
+#### Close Button
+
+1. The steps are similar to **Share Button**. So repeat the steps **Share Button**, change all the names from **shate** to **close**, and use the following codes instead of the previous one in **edit script**.
+    ```javascript
+	window.postMessage('sumerian-close-packet','*');
+	ctx.transitions.success();
+    ```
+
 ## Config Default Hidden
 1. Click the eye button on the left console, the corresponding entity will be disappear.
-   ![](/image/WechatIMG27.png)
+   ![](/image/config-default-hidden.png)
 
 
 ## Conclusion
