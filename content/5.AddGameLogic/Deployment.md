@@ -8,10 +8,19 @@ weight: 54
 
 Run the following code to push changes to CodeCommit.
 ```bash
-git add amplify/backend/backend-config.json public/images/red_envolope.jpg \
-src/App.js src/aws-exports.js src/components/AR.js src/components/Ranking.js \
-src/components/Sharing.js src/index.js .graphqlconfig.yml amplify/backend/api/ \
-amplify/backend/function/ src/graphql/
+# Git Add
+git add amplify/backend/backend-config.json \
+public/images/red_envolope.jpg \
+src/App.js src/aws-exports.js \
+src/components/AR.js \
+src/components/Ranking.js \
+src/components/Sharing.js \
+src/index.js \
+.graphqlconfig.yml \
+amplify/backend/api/ \
+amplify/backend/function/ \
+src/graphql/
+# Git Commit
 git commit -m "add game logic"
 git push
 ```

@@ -5,7 +5,7 @@ weight: 53
 ---
 
 update **src/App.js**
-```js
+{{< highlight javascript >}}
 import React from 'react';
 import './App.css';
 import { withAuthenticator } from 'aws-amplify-react';
@@ -137,10 +137,10 @@ const App=({location}) => {
 };
 
 export default withAuthenticator(withRouter(App), { includeGreetings: false });
-```
+{{< /highlight >}}
 
 update `src/component/Ranking.js`
-```js
+{{< highlight javascript >}}
 import React from 'react'
 import { withAuthenticator } from 'aws-amplify-react';
 import { List, ListItem, ListItemText } from '@material-ui/core';
@@ -196,10 +196,10 @@ class Ranking extends React.Component {
 }
 
 export default withAuthenticator(Ranking);
-```
+{{< /highlight >}}
 
 Update `src/components/AR.js`
-```js
+{{< highlight javascript >}}
 import React from 'react'
 import { withAuthenticator } from 'aws-amplify-react'
 import {XR as awsXR, Auth} from 'aws-amplify'
@@ -324,10 +324,10 @@ class AR extends React.Component {
 
 export default withAuthenticator(AR);
 
-```
+{{< /highlight >}}
 
 update `src/components/Sharing.js`
-```js
+{{< highlight javascript >}}
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardMedia, CardContent, Typography, Grid} from '@material-ui/core'
@@ -483,10 +483,10 @@ class Sharing extends React.Component {
 }
 
 export default withAuthenticator(Sharing)
-```
+{{< /highlight >}}
 
 update `src/index.js`
-```js
+{{< highlight javascript >}}
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'typeface-roboto';
@@ -509,5 +509,5 @@ ReactDOM.render(routing, document.getElementById('root'));
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-```
+{{< /highlight >}}
 

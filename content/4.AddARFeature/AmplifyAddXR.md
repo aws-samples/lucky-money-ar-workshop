@@ -51,7 +51,7 @@ amplify push
 ## Add AR Feature to web APP
 
 Open **src/components/AR.js**, and replace with the following code
-```javascript
+{{< highlight javascript >}}
 import React from 'react'
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
@@ -112,10 +112,10 @@ class AR extends React.Component {
 };
 
 export default AR;
-``` 
+{{< /highlight >}}
 
 {{% notice note %}}
 You will need a mobile device to test the AR feature.
-{{% notice note %}}
+{{% /notice %}}
 
 So far, you have added AR feature to the web application. In the next session, we will deploy this web application via AWS Amplify Console.
