@@ -1,7 +1,7 @@
 ---
 title: "Setup Cloud9 Environment"
 chapter: false
-weight: 12
+weight: 13
 ---
 
 To begin, you will need to login to your AWS account and set the Cloud9 environment.

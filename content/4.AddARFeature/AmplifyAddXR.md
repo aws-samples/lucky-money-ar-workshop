@@ -11,7 +11,7 @@ weight: 41
 ![](/images/addAR/8th_app_key.png)
 1. Go back to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value.
 ```html
-    <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY></script>
+    <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY"></script>
 ```
 ![](/images/addAR/8th_header.png)
 

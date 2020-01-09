@@ -14,7 +14,7 @@ Open the Amplify domain on your mobile. You can also use [QRCode Generator](http
 1. Click the AR button on top right corner
 1. When asked for camera permission, click **Allow**
 1. Find a real Red Packet, and scan using camera
-//TODO: Need a sceenshop here
+![](/images/introduction/real-ar.jpeg?width=20pc)
 
 Now, you have added AR feature to the application. However, it still short of business logic. In the next chapter, we will add some APIs and business logic for this web application.
 

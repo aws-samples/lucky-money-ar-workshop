@@ -1,17 +1,17 @@
 ---
 title: "Pre-requisites"
 chapter: false
-weight: 10.5
+weight: 11
 ---
 
 ## Pre-requisites
 
 To finish the workshop successfully, you will need:      
-
-1. **[GitHub account](https://github.com/)** for folk codes     
-2. **AWS account** for resources to build the application    
-3. **Verify if [8th wall]((https://www.8thwall.com/)) supports your mobile phone** as the AR integration in the application is achieve via 8th wall. The detailed requirement is listed below.    
-
+    
+1. **AWS account** for resources to build the application
+1. **[8th Wall account](https://www.8thwall.com/)**, we use this WebAR engine
+1. **Verify if [8th wall](https://www.8thwall.com/) supports your mobile phone**. The detailed requirement is listed below. scan this codeor visit **https://8th.io/jini** on a smartphone or tablet.
+![](/images/introduction/8th-wall-qr.png)
 
 ## Requirement on mobile phones
 
@@ -22,7 +22,7 @@ This translates to the following for iOS and Android devices:
 #### iOS:
 
 * OS: iOS 11 or newer
-* Supported Browsers:  Safari
+* Supported Browsers: Safari
 
 #### Android:
 
