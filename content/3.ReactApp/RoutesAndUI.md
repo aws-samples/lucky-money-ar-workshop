@@ -16,7 +16,7 @@ The following components will be created:
 ## Create React Components and download assets
 
 Run the following commands to create some files, and download necessary assets:
-```bash
+{{< highlight shell >}}
 cd ~/environment/ako2020-lucky-money
 # create components folder
 mkdir src/components/
@@ -27,13 +27,14 @@ touch src/components/Ranking.js
 # create assets folder
 mkdir public/images
 # download the lucky money image
-wget https://github.com/JoeShi/ako2020-lucky-money/blob/master/static/images/reactApp/red_envolope.jpg -O public/images/red_envolope.jpg
-```
+wget {{< param codeRepo >}}/blob/master/static/images/reactApp/red_envolope.jpg -O public/images/red_envolope.jpg
+{{< /highlight >}}
 
 ## Update React Component 
 
-1. Edit the **src/components/Ranking.js** file and replace the contents with the following code, save the file. 
-```js
+1. Edit the **src/components/Ranking.js** file and replace the contents with the following code, save the file 
+
+{{< highlight javascript >}}
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core';
@@ -85,10 +86,11 @@ function Ranking() {
 }
 
 export default Ranking;
-```
+{{< /highlight >}}
 
 1. Edit the **src/components/AR.js** file and replace the contents with the following code, save the file. 
-```js
+
+{{< highlight javascript >}}
 import React from 'react'
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
@@ -113,14 +115,14 @@ class AR extends React.Component {
       </div>
     );
   }
-
 };
 
 export default AR;
-```
+{{< /highlight >}}
 
 1. Update **src/components/Sharing.js**
-```js
+
+{{< highlight javascript >}}
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardMedia, CardContent, Typography, Grid} from '@material-ui/core'
@@ -169,10 +171,11 @@ function Sharing() {
 }
 
 export default Sharing
-```
+{{< /highlight >}}
 
 1. Update **src/App.js**
-```js
+
+{{< highlight javascript >}}
 import React from 'react';
 import './App.css';
 import AR from './components/AR';
@@ -242,8 +245,7 @@ function App() {
   const runAR = () => event => {
     window.location.href = "/ar/";
   };
-
-
+  
   return (
     <Router>
       <div>
@@ -278,11 +280,12 @@ function App() {
 };
 
 export default App
-```
+{{< /highlight >}}
 
 
 1. Update **src/index.js**
-```js
+
+{{< highlight javascript >}}
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'typeface-roboto';
@@ -311,7 +314,7 @@ ReactDOM.render(routing, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-```
+{{< /highlight >}}
 
 1. Now, we have a React web application with a couple of pages. Return to the preview window for your application and you should see the skeleton of Lucky Money web app.
 ![](/images/reactApp/application_stub.png)

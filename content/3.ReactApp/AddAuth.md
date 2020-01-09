@@ -37,7 +37,7 @@ amplify push
 ## Update Authentication to web APP
 
 Replace the **src/App.js** with the following code.
-```javascript
+{{< highlight javascript >}}
 import React from 'react';
 import './App.css';
 import AR from './components/AR';
@@ -148,7 +148,7 @@ function App() {
 };
 
 export default withAuthenticator(App, { includeGreetings: false });
-```
+{{< /highlight >}}
 
 In the above code, we make the following changes:
 

@@ -12,19 +12,20 @@ relativeURLs = true
   hrefTargetBlank = true
 
 [params]
-editURL = "https://github.com/joeshi/ako2020-lucky-money/edit/master/content/"
-themeVariant = "mine"
-showVisitedLinks = false
-author = "Joe SHI<qiaoshi@amazon.com>"
-description = "Learn how to build AR web application using Amazon Sumerian, AWS Amplify"
-disableSearch = false
-disableAssetsBusting = false
-disableShortcutsTitle = true
-branch = "master"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "tango"
+  editURL = "https://github.com/joeshi/ako2020-lucky-money/edit/master/content/"
+  themeVariant = "mine"
+  showVisitedLinks = false
+  author = "Joe SHI<qiaoshi@amazon.com>"
+  description = "Learn how to build AR web application using Amazon Sumerian, AWS Amplify"
+  disableSearch = false
+  disableAssetsBusting = false
+  disableShortcutsTitle = true
+  branch = "master"
+  pygmentsUseClasses = true
+  pygmentsCodeFences = true
+  pygmentsCodefencesGuessSyntax = true
+  pygmentsStyle = "tango"
+  codeRepo = "https://github.com/JoeShi/sumerian-amplify-app"
 
 
 [[menu.shortcuts]]

@@ -1,6 +1,6 @@
 ---
 title: "Lucky Money Game Competition"
-chapter: true
+chapter: false
 weight: 60
 ---
 
