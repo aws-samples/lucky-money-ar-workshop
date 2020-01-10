@@ -25,7 +25,7 @@ Next, we need to make some changes to the amplify directory that was just added.
 
 Under **amplify/backend/function/LuckyMoneyFunction/src**, add a new file called `lambda_function.py`. Add the following code in **lambda_function.py**.
 
-```python
+{{< highlight python >}}
 from __future__ import print_function
 from boto3.dynamodb.conditions import Key, Attr
 from botocore.exceptions import ClientError
@@ -44,9 +44,9 @@ advertisementMap={}
 USER_POOL_ID = os.environ['COGNITO_USER_POOL_ID']
 REGION_NAME = os.environ['REGION']
 
-TABLE_ADVERTISEMENT = os.environ['TABLE_ADVERTISEMENT']
-TABLE_USER_RANKING = os.environ['TABLE_USER_RANKING']
-TABLE_SHARED_RED_PACKET = os.environ['TABLE_SHARED_RED_PACKET']
+TABLE_ADVERTISEMENT = 'Advertisement' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
+TABLE_USER_RANKING = 'User' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
+TABLE_SHARED_RED_PACKET = 'SharedRedPacket' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
 
 cognitoClient = boto3.client('cognito-idp')
 dynamodbClient = boto3.resource("dynamodb", region_name=REGION_NAME)
@@ -627,7 +627,8 @@ def lambda_handler(event, context):
 #############################################################################################
 #############################################################################################
 #############################################################################################
-```
+
+{{< /highlight >}}
 
 **Save** the lambda_function.py file. Next, open the **amplify/backend/function/LuckyMoneyFunction/LuckyMoneyFunction-cloudformation-template.json** file and make these very specific changes:
 
@@ -657,10 +658,17 @@ What are we doing in the above steps? Amplify creates a node.js function by defa
 
 Next, run `amplify push` to push our recommendation logic to AWS. You should receive a completion message when it is done deploying.
 
-## TODO: Lambda Environment Varible 
+## Lambda Environment Varible 
 
-* `COGNITO_USER_POOL_ID`
-* `TABLE_ADVERTISEMENT`
-* `TABLE_USER_RANKING`
-* `TABLE_SHARED_RED_PACKET`
+You will need **COGNITO_USER_POOL_ID**, and **APPSYNC_ID** for the lambda function. Update using the following code
+
+```shell
+aws lambda update-function-configuration \
+--function-name LuckyMoneyFunction-dev \
+--environment Variables="{ENV=dev, REGION=${region}, USER_POOL_ID=${user_pool_id}, APPSYNC_ID=${appsync_id}}"
+```
+
+Replace **${region}**, **${user_pool_id}**, **${appsync_id}** with your own value. You will find the first two in **src/aws-exports.js** and the last one in **amplify/amplify-meta.json**
+
+![](/images/addGameLogic/amplify-meta.png)
 
