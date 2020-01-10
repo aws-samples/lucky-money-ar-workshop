@@ -10,8 +10,11 @@ weight: 22
 
 ####  Red Packet 
 
-1. On the left side **Entities** panel, and select the **LuckyMoney** entity
-    ![](/images/addSumerian/select-box.png)
+1. On the left side **Entities** panel, delete **Default Camera**.
+    ![](/images/addSumerian/add-behaviors-delete-default-camera.png)
+
+1.  Select the **LuckyMoney** entity
+    ![](/images/addSumerian/add-behaviors-select-packet.png)
 
 1. Click **Add Component**, choose **State Machine**.    
    ![](/images/addSumerian/add-component.png)   
