@@ -23,7 +23,7 @@ amplify add function
 
 Next, we need to make some changes to the amplify directory that was just added. 
 
-Under **amplify/backend/function/getrecommendation/src**, add a new file called `lambda_function.py`. Add the following code in **lambda_function.py**.
+Under **amplify/backend/function/LuckyMoneyFunction/src**, add a new file called `lambda_function.py`. Add the following code in **lambda_function.py**.
 
 ```python
 from __future__ import print_function
@@ -630,6 +630,7 @@ def lambda_handler(event, context):
 ```
 
 **Save** the lambda_function.py file. Next, open the **amplify/backend/function/LuckyMoneyFunction/LuckyMoneyFunction-cloudformation-template.json** file and make these very specific changes:
+
 1. Modify the **Handler** property to `lambda_function.lambda_handler`(~line 28)
 ```
 "Handler": "lambda_function.lambda_handler",
@@ -639,13 +640,13 @@ def lambda_handler(event, context):
 "Runtime": "python3.7",
 ```
 1. Under the **LambdaExecutionRole** property, add another entry after **AssumeRolePolicyDocument** (~ line 102 - don’t forget the leading comma!):
-```
+{{< highlight json>}}
 ,
 "ManagedPolicyArns": [
   "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess",
   "arn:aws:iam::aws:policy/AmazonCognitoPowerUser"
 ]
-```
+{{< /highlight >}}
 ![](/images/addGameLogic/lambda_policy.png)
 
 Save the **LuckyMoneyFunction-cloudformation-template.json** file
@@ -657,3 +658,9 @@ What are we doing in the above steps? Amplify creates a node.js function by defa
 Next, run `amplify push` to push our recommendation logic to AWS. You should receive a completion message when it is done deploying.
 
 ## TODO: Lambda Environment Varible 
+
+* `COGNITO_USER_POOL_ID`
+* `TABLE_ADVERTISEMENT`
+* `TABLE_USER_RANKING`
+* `TABLE_SHARED_RED_PACKET`
+
