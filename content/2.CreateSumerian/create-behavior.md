@@ -43,11 +43,14 @@ weight: 22
     ![](/image/script-choose-type.png)
 
 1. Click the **pencil** button to edit script, copy the following codes into the function `enter`, then save the change.
-    ```javascript
-	window.postMessage('sumerian-open-packet','*');
-	ctx.transitions.success();
-    ```
+    
+    {{< highlight javascript >}}
+        window.postMessage('sumerian-open-packet','*');
+        ctx.transitions.success();
+    {{< /highlight >}}
+
     ![](/image/script-edit-script.png)
+
     ![](/image/script-save-change.png)
 
 1. Click the **wait for click** state, drag a line to **hide** state, and drag a line back to **wait for click** state.   
@@ -96,10 +99,12 @@ weight: 22
 1. Add another action **Execute Script**. Click the **+** button to add script, choose **Custom (Legacy Format)**. 
 
 1. Click the **pencil** button to edit script, copy the following codes into the function `enter`, then save the change.
-    ```javascript
-	window.postMessage('sumerian-share-packet','*');
-	ctx.transitions.success();
-    ```
+
+    {{< highlight javascript >}}
+	    window.postMessage('sumerian-share-packet','*');
+	    ctx.transitions.success();
+    {{< /highlight >}}
+
     ![](/image/share-button-save-script.png)
 
 1. Click the **ListenForClickShare** state, drag a line to **ExeShareScript** state, and drag a line back to **ListenForClickShare** state.
@@ -108,10 +113,11 @@ weight: 22
 #### Close Button
 
 1. The steps are similar to **Share Button**. So repeat the steps **Share Button**, change all the names from **shate** to **close**, and use the following codes instead of the previous one in **edit script**.
-    ```javascript
+
+{{< highlight javascript >}}
 	window.postMessage('sumerian-close-packet','*');
 	ctx.transitions.success();
-    ```
+{{< /highlight >}}
 
 ## Config Default Hidden
 1. Click the eye button on the left console, the corresponding entity will be disappear.
