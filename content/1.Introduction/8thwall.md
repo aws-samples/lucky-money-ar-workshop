@@ -22,30 +22,26 @@ weight: 14
 
 The image target is a product image. Once it found the target from the camera streaming, it will render 3D content.
 
-1. Click the Image Target icon in the left navigation or the "Manage Image Targets" link on the Project Dashboard.
+{{%attachments title="Image Targets" pattern=".*(png)"/%}}
+
+1. Download the above images to your local desktop
+
+1. Click the Image Target icon in the left navigation or the "Manage Image Targets" link on the Project Dashboard
 ![](/image/8th-wall-console-appkey-imagetargets.jpg)
 
-1. Drag your image (.jpg, .jpeg or .png) to the "Upload Image" panel, or click "Upload Image" and use your file browser to select your image. Make sure you **meet all the requirements for the target image** which are listed below.
+1. Drag your image (.jpg, .jpeg or .png) to the "Upload Image" panel, or click "Upload Image" and use your file browser to select your image. Make sure you **meet all the requirements for the target image** which are listed below
 
-1. On the Image Target Upload screen, set orientation and use the zoom slider to select region of interest.
+1. On the Image Target Upload screen, set orientation and use the zoom slider to select region of interest
 
-1. Give your image target a name by editing the field at the top left of the window.
+1. Give your image target a name by editing the field at the top left of the window
 
-1. Click Upload.
+1. Click **Upload**
 
 1. Select **Load automatically**
 
-1. Click Save
+1. Click **Save**
+![](/images/introduction/image-targets.png?width=30pc)
 
-#### Image Target Requirements
-
-* **File Types** :  .jpg, .jpeg or .png
-* **Aspect Ratio** :  3:4
-* **Dimensions** :
-   * Minimum: 480 x 640 pixels
-   * Maximum length or width: 2048 pixels.
-
-> Note: If you upload something larger, the image is resized down to a max length/width of 2048, maintaining aspect ratio.)
 
 ## Device Authorization
 
