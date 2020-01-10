@@ -33,7 +33,7 @@ If you see any errors, please double check you are uploading **ZIP file** direct
 {{% /notice %}}
 
 1. After loading you should be able to see the entities now.
-   ![](/image/WechatIMG8_1.png)
+   ![](/images/addSumerian/create-scene.png)
 
 1. Use your mouse right click button and scroll button to see the entities
 

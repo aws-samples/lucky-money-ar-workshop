@@ -26,6 +26,7 @@ relativeURLs = true
   pygmentsCodefencesGuessSyntax = true
   pygmentsStyle = "tango"
   codeRepo = "https://github.com/JoeShi/sumerian-amplify-app/"
+  codeRepoName = "JoeShi/sumerian-amplify-app"
 
 
 [[menu.shortcuts]]

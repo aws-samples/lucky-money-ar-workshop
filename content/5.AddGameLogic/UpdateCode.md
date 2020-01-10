@@ -4,6 +4,25 @@ chapter: false
 weight: 53
 ---
 
+## Update Code Automatically
+
+You can update your code to include the changes, the following scripts will overwrite your changes.
+
+{{< highlight bash >}}
+wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/AR.js -O ./src/components/AR.js
+wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Ranking.js -O ./src/components/Ranking.js
+wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Sharing.js -O ./src/components/Sharing.js
+wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/App.js -O ./src/App.js
+wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/index.js -O ./src/index.js
+
+{{< /highlight >}}
+
+## Code Changes explanation
+
+{{% notice note %}}
+You don't need to copy and paste the following code again. You have downloaded using the above scripts.
+{{% /notice %}}
+
 update **src/App.js**
 {{< highlight javascript >}}
 import React from 'react';

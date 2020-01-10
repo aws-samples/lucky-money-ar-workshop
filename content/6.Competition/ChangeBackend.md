@@ -11,15 +11,20 @@ In this step, we will revise the configuration file ```aws-exports.js``` to chan
 
 ## Change the Configuration File
 
-1. Find the ```aws-exports.js``` file in your project under xxx path.
+1. Find the **aws-exports.js** file in your project under xxx path.
 1. Revise the file to the following information
 ```
 AWS_ACCOUNT_ID = XXXXXX 
 ```
 
 ## Redeploy
-1. Run ```amplify push``` to finish the redeployment. 
 
-Now you are ready to compete, read the next page for usage guide.
+Run the following command to push your changes to AWS and trigger deployment
 
-+++++++++ Joe adds steps to this part +++++++++
+```bash
+git add src/aws-exports.js 
+git commit -m "update aws-exports.js"
+git push
+```
+
+Once the deployment finished, you can refresh your brower to load the lastest configurations. 

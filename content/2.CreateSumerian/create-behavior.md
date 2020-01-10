@@ -16,7 +16,7 @@ weight: 22
 1. Click **Add Component**, choose **State Machine**.    
    ![](/images/addSumerian/add-component.png)   
    
-   ![](/image/WechatIMG8.png)   
+   ![](/image/WechatIMG8.png)   sel
 
 1. Click the **+ button**  to add behavior.     
    ![](/image/WechatIMG11.png)
@@ -124,6 +124,14 @@ The steps are similar to **Share Button**. So repeat the steps **Share Button**,
 1. Click the eye button on the left console, the corresponding entity will be disappear.
    ![](/images/addSumerian/hide-cash.png)
 
+
+## Set AR Camera
+
+1. Find the main AR Camera using the left navigation bar
+
+1. Change the **Z** value of position to `2` and save the scene
+
+![](/images/addSumerian/change-camera.png)
 
 ## Conclusion
 Congratulations! You have completed the sumerian settings. So far, we cannot test the final effects as it has not been integrated with our application yet. In the next session, we will create a React web application.
