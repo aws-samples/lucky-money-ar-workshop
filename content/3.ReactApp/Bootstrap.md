@@ -49,7 +49,7 @@ npm start
 After this, verify that the development server started successfully with this message:
 ![npm verify](/images/reactApp/npm_verify.png)
 
-In the Cloud9 environment, choose Preview Running Application from the Preview menu:
+In the Cloud9 environment, choose **Preview Running Application** from the **Preview** menu:
 ![preview app](/images/reactApp/preview_running_app.png)
 
 This will load a browser window within Cloud9. Ensure the default application is working correctly:

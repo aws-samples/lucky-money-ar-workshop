@@ -7,6 +7,8 @@ weight: 21
 
 ## Create a new Sumerian Scene
 
+1. Go to [Amazon Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start)
+
 1. Under **Create scene from template**, choose **Augmented Reality**.
    ![](/image/WechatIMG4_1.png)
     
@@ -19,13 +21,19 @@ weight: 21
 
 ## Create Sumerian Entity
 
-1. In the assets panel, click file icon and choose the template file **template-bundle.zip** we prepare to upload **without unzipping** it. The zip file contains images of package and money. 
-    {{%attachments title="Download Link:" /%}}
-   ![](/image/WechatIMG5.png)
-   > If you see any errors, please double check you are uploading **ZIP file** directly instead of unzipping files.
+{{%attachments title="Download Link:" /%}}
+
+1. Download the above attachment into your local desktop 
+
+1. In the left side **Assets** panel, click file icon and choose the template file **template-bundle.zip** we prepare to upload **without unzipping** it. The zip file contains images of package and money.
+![](/image/WechatIMG5.png) 
+
+{{% notice warning %}}
+If you see any errors, please double check you are uploading **ZIP file** directly instead of unzipping files.
+{{% /notice %}}
 
 1. After loading you should be able to see the entities now.
    ![](/image/WechatIMG8_1.png)
 
-1. Try to click any arrow button in three directions to drag around the entities.
+1. Use your mouse right click button and scroll button to see the entities
 

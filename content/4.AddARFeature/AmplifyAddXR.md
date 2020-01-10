@@ -53,11 +53,21 @@ amplify push
 Open **src/components/AR.js**, and replace with the following code
 {{< highlight javascript >}}
 import React from 'react'
+import { withAuthenticator } from 'aws-amplify-react'
+import {XR as awsXR, Auth} from 'aws-amplify'
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
-import { XR as awsXR } from 'aws-amplify'
+import './Toast.css'
 
 class AR extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      user: {},
+      toastText: "aaaaaa"
+    }
+  }
+
   render() {
     return (
       <div>
@@ -74,16 +84,31 @@ class AR extends React.Component {
         <div id="sumerian-scene-dom-id" style={ {height: '100vh'} }>
             <p id="loading-status">Loading...</p>
           </div>
+        <div id="snackbar">{this.state.toastText}</div>
       </div>
     );
   }
+
 
   moveToMain() {
     window.location.href = "/";
   };
 
   componentDidMount() {
+    const self = this
     this.loadAndStartScene();
+    
+    Auth.currentUserInfo().then(user => {
+      this.setState({user: user})
+    })
+
+    var showToast = function(){
+      let script = document.createElement('script')
+      script.setAttribute("id","snackbar-script")
+      if (document.getElementById('snackbar-script') != null) document.getElementById('snackbar-script').remove();
+      script.text = 'var x = document.getElementById("snackbar");x.className = "show";setTimeout(function() {x.className = x.className.replace("show", "");}, 3000);'
+      document.getElementById('snackbar').appendChild(script)
+    }
   }
 
   async loadAndStartScene() {
@@ -107,11 +132,22 @@ class AR extends React.Component {
 
     window.XR8.Sumerian.addXRWebSystem(world);
 
+    window.sumerian.SystemBus.addListener('doshare', () => {
+      // Add error handling here
+      console.log ('DoShare is clicked');
+    });
+
+    window.sumerian.SystemBus.addListener('doclose', () => {
+      // Add error handling here
+      console.log ('DoClose is clicked');
+    });
+
     awsXR.start('LuckyMoneyAR');
   }
 };
 
-export default AR;
+export default withAuthenticator(AR);
+
 {{< /highlight >}}
 
 {{% notice note %}}
