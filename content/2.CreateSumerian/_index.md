@@ -1,5 +1,5 @@
 ---
-title: "Sumerian Introduction"
+title: "Create Sumerian AR Scene"
 chapter: false
 weight: 20
 ---
