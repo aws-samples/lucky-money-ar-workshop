@@ -10,7 +10,7 @@ weight: 22
 
 ####  Red Packet 
 
-1. On the left side **Entities** panel, delete **Default Camera**.
+1. On the left side **Entities** panel, DELETE **Default Camera**.
     ![](/images/addSumerian/add-behaviors-delete-default-camera.png)
 
 1.  Select the **LuckyMoney** entity
@@ -134,12 +134,6 @@ The steps are similar to **Share Button**. So repeat the steps **Share Button**,
 
 1. Change the **Z** value of position to `2` and save the scene
 ![](/images/addSumerian/change-camera.png)
-
-1. Delete the **Default Camera** from the entities panel
-![](/images/addSumerian/delete-default-camera.png)
-
-1. Delete the **AR Camera** which is **NOT** the main camera
-![](/images/addSumerian/delete-ar-camera.png)
 
 ## Conclusion
 Congratulations! You have completed the sumerian settings. So far, we cannot test the final effects as it has not been integrated with our application yet. In the next session, we will create a React web application.
