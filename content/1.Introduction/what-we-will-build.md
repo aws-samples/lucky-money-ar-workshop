@@ -7,7 +7,7 @@ weight: 12
 ## Architecture
 The following shows the architect of our application. The frontend is static React web application, and the server side is built with a couple of AWS services.
 
-![](/image/arch.png)
+![](/images/introduction/arch.png)
 
 * Amazon Cognito: Authentication
 * AWS AppSync: GraphQL APIs     

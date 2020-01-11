@@ -30,6 +30,7 @@ mkdir public/images
 # download the lucky money image
 wget {{< param codeRepo >}}raw/master/public/images/red_envolope.jpg -O public/images/red_envolope.jpg
 wget {{< param codeRepo >}}raw/master/public/images/redpacket.png -O public/images/redpacket.png
+
 {{< /highlight >}}
 
 ## Update React Component 
@@ -157,6 +158,62 @@ export default AR;
 
 {{< highlight javascript >}}
 import React from 'react'
+import { List, ListItem, ListItemText } from '@material-ui/core';
+
+class Ranking extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      balance: 0,
+      users: []
+    }
+  }
+
+  componentDidMount() {
+    const topUsers = [
+      {
+        UserEmail: 'a@amazon.com',
+        Balance: 1090
+      },
+      {
+        UserEmail: 'b@amazon.com',
+        Balance: 890
+      },
+      {
+        UserEmail: 'c@amazon.com',
+        Balance: 450
+      }
+    ]
+    this.setState({users: topUsers, balance: 4.50})
+  }
+  render() {
+    return (
+      <div>
+      <h2>Your Balance: { this.state.balance }</h2>
+      <List dense>
+        {this.state.users.map(user => {
+          const labelId = `checkbox-list-secondary-label-${user.UserEmail}`;
+          return (
+            <ListItem key={user.UserEmail} button>
+              <ListItemText id={labelId} primary={`${user.UserEmail}`} />
+              <ListItemText edge="end" primary={`$ ${user.Balance/100}`} />
+            </ListItem>
+          );
+        })}
+      </List>
+    </div>
+    )
+  }
+}
+
+export default Ranking
+{{< /highlight >}}
+
+
+1. Update **src/components/Sharing.js**
+
+{{< highlight javascript >}}
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardActionArea, CardMedia, CardContent, Typography, Grid} from '@material-ui/core'
 import Dialog from '@material-ui/core/Dialog';
@@ -186,8 +243,8 @@ const useStyles = makeStyles({
 function RedPacketCard(props) {
   const classes = useStyles()
   const [open, setOpen] = React.useState(false);
-  const [luckyMoneyValue, setLuckyMoneyValue] = React.useState('$ 1.2');
-  const [luckyMoneyText, setLuckyMoneyText] = React.useState('Lucky Money Shared from q@amazon.com')
+  const [luckyMoneyValue] = React.useState('$ 1.2');
+  const [luckyMoneyText] = React.useState('Lucky Money Shared from q@amazon.com')
   const luckyMoney = props
   
   const handleClose = () => {
@@ -280,173 +337,6 @@ class Sharing extends React.Component {
 }
 
 export default Sharing
-{{< /highlight >}}
-
-
-1. Update **src/components/Sharing.js**
-
-{{< highlight javascript >}}
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardActionArea, CardMedia, CardContent, Typography, Grid} from '@material-ui/core'
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import { withAuthenticator } from 'aws-amplify-react';
-
-import * as queries from '../graphql/queries';
-import * as mutations from '../graphql/mutations';
-import {API, graphqlOperation, Auth} from 'aws-amplify';
-
-const useStyles = makeStyles({
-  card: {
-    maxWidth: 345,
-    marginTop: 10
-  },
-  media: {
-    height: 140,
-  },
-  dialog: {
-    backgroundImage:`url(${'/images/redpacket.png'})`,
-    height: 320,
-    width: 247,
-    borderRadius: '21px'
-  },
-  modalText:{
-    textAlign: "center"
-  }
-});
-
-function RedPacketCard(props) {
-  const classes = useStyles()
-  const [open, setOpen] = React.useState(false);
-  const [luckyMoneyValue, setLuckyMoneyValue] = React.useState('');
-  const [luckyMoneyText, setLuckyMoneyText] = React.useState('')
-  const luckyMoney = props
-  
-  const handleClose = () => {
-    setOpen(false);
-  };
-  
-  const openLuckyMoney = async () => {
-    // try catch here
-    const currentUser = await Auth.currentUserInfo()
-    try {
-      const shardRedPacketRes = await API.graphql(graphqlOperation(mutations.openSharedRedPacket, {
-        ProductType: props.adsId, 
-        UserEmail: props.owner, 
-        FriendUserEmail: currentUser.attributes.email
-      }))
-      console.log(shardRedPacketRes.data.openSharedRedPacket)
-      const details = JSON.parse(shardRedPacketRes.data.openSharedRedPacket.RPShareDetails)
-      console.log(details)
-      const detail = details.redPackets.find(detail => detail.friend === currentUser.attributes.email)
-      // set the display value
-      setLuckyMoneyValue('$ ' + detail.money/100)
-      setLuckyMoneyText("Lucky Money (Hongbao)\n Shared from "+ luckyMoney.owner)
-      // set popup modal open
-      setOpen(true)
-    } catch (err) {
-      // Already opened
-      setLuckyMoneyText("You have already opened it")
-      setLuckyMoneyValue("")
-      setOpen(true)
-      console.error(err)
-    }    
-  }
-
-  return (
-    <div>
-    <Card className={classes.card}>
-      <CardActionArea onClick={() => openLuckyMoney()}>
-        <CardMedia
-          className={classes.media}
-          image="/images/red_envolope.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lucky Money (Hongbao)
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Shared from {luckyMoney.owner}
-
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="responsive-dialog-title"
-      classes={{paper: classes.dialog}}
-    >
-      <DialogContent>
-
-        <DialogContentText style={{color:'#efbc3c'}} className={classes.modalText}>
-          {/* Lucky Money from  */}
-          {luckyMoneyText}
-        </DialogContentText>
-        {/* <DialogContentText style={{color:'#efbc3c'}} className={classes.modalText}>
-        {luckyMoney.owner}
-        </DialogContentText> */}
-        <DialogContentText style={{color:'#efbc3c',fontSize: '3rem'}} className={classes.modalText}>
-          {/* Random Balance write in here */}
-          {luckyMoneyValue}
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions onClick={handleClose} style={{height: '120px'}}>
-      </DialogActions>
-    </Dialog>
-    </div>
-    
-  )
-}
-
-class Sharing extends React.Component {
-
-  constructor() {
-    super()
-    this.state = {
-      luckyMoneys: []
-    }
-  }
-
-  componentDidMount() {
-    this.init().then()
-  }
-
-  async init() {
-    const luckyMoneysRes =  await API.graphql(graphqlOperation(queries.redPacketsByProductType, 
-      { 
-        ProductType: "1", 
-        filter: { 
-          SharedDoneFlag: { eq: false }
-        }
-      }))
-
-    const luckyMoneys = luckyMoneysRes.data.redPacketsByProductType.items
-    if (luckyMoneys) {
-      this.setState({luckyMoneys: luckyMoneys})
-    }
-  }
-
-  render() {
-    return (
-      <Grid container justify={"center"}>
-        {this.state.luckyMoneys.map(luckyMoney => {
-          const keyId = `shared-lucky-money-id-${luckyMoney.UserEmail}`;
-          return (
-            <RedPacketCard key={keyId} owner={luckyMoney.UserEmail} adsId={luckyMoney.ProductType} />
-          )
-        })}
-      </Grid>
-    )
-  }
-}
-
-export default withAuthenticator(Sharing)
 {{< /highlight >}}
 
 1. Update **src/App.js**
@@ -601,7 +491,7 @@ ReactDOM.render(routing, document.getElementById('root'));
 serviceWorker.unregister();
 {{< /highlight >}}
 
-1. Now, we have a React web application with a couple of pages. Return to the preview window for your application and you should see the skeleton of Lucky Money web app.
+Now, we have a React web application with a couple of pages. Return to the preview window for your application and you should see the skeleton of Lucky Money web app.
 ![](/images/reactApp/application_stub.png)
 
 You can now continue adding Authentication feature in next step using AWS Amplify.

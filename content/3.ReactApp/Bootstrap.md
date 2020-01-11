@@ -11,7 +11,7 @@ We will now create the React Application. This will include the following compon
 
 ## Create the React APP
 
-Run the following command to create the React applicaiton:
+Run the following command in Cloud9 envrionment to create the React applicaiton:
 
 {{% notice warning %}}
 The command to revert to react-scripts version 3.2.0 is due to a security error that occurs when running in debug mode with Cloud9 on version 3.3.0. If you are not using Cloud9, you may be able to use 3.3.0 but it is not required for this workshop.

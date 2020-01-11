@@ -44,9 +44,9 @@ advertisementMap={}
 USER_POOL_ID = os.environ['COGNITO_USER_POOL_ID']
 REGION_NAME = os.environ['REGION']
 
-TABLE_ADVERTISEMENT = 'Advertisement' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
-TABLE_USER_RANKING = 'User' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
-TABLE_SHARED_RED_PACKET = 'SharedRedPacket' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
+TABLE_ADVERTISEMENT = 'Advertisement' + '-' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
+TABLE_USER_RANKING = 'User' + '-' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
+TABLE_SHARED_RED_PACKET = 'SharedRedPacket' + '-' + os.environ['APPSYNC_ID'] + '-' + os.environ['env']
 
 cognitoClient = boto3.client('cognito-idp')
 dynamodbClient = boto3.resource("dynamodb", region_name=REGION_NAME)
@@ -640,7 +640,7 @@ def lambda_handler(event, context):
 ```
 "Runtime": "python3.7",
 ```
-1. Under the **LambdaExecutionRole** property, add another entry after **AssumeRolePolicyDocument** (~ line 102 - don’t forget the leading comma!):
+1. Under the **LambdaExecutionRole** property, add another entry after **AssumeRolePolicyDocument** (~ line 101 - don’t forget the leading comma!):
 {{< highlight json>}}
 ,
 "ManagedPolicyArns": [
@@ -658,17 +658,5 @@ What are we doing in the above steps? Amplify creates a node.js function by defa
 
 Next, run `amplify push` to push our recommendation logic to AWS. You should receive a completion message when it is done deploying.
 
-## Lambda Environment Varible 
 
-You will need **COGNITO_USER_POOL_ID**, and **APPSYNC_ID** for the lambda function. Update using the following code
-
-```shell
-aws lambda update-function-configuration \
---function-name LuckyMoneyFunction-dev \
---environment Variables="{ENV=dev, REGION=${region}, USER_POOL_ID=${user_pool_id}, APPSYNC_ID=${appsync_id}}"
-```
-
-Replace **${region}**, **${user_pool_id}**, **${appsync_id}** with your own value. You will find the first two in **src/aws-exports.js** and the last one in **amplify/amplify-meta.json**
-
-![](/images/addGameLogic/amplify-meta.png)
 

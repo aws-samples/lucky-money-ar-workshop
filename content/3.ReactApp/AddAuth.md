@@ -62,7 +62,7 @@ Now you can return to the preview tab for your application and verify that you c
 1. A default Sign In web page will be displayed
 1. Create **Create account**
 ![](/images/reactApp/auth_create_account.png?width=20pc)
-1. Input the details. DO INPUT *Email* in the **username** field.
+1. Input the details. DO input **EMAIL** in the **username** field, we will use email as the username
 ![](/images/reactApp/auth_signup.png?width=20pc)
 1. You will receive an activation code in your email, find the code and input on the confirmation page
 ![](/images/reactApp/auth_confirm.png?width=20pc)

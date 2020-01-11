@@ -14,7 +14,7 @@ AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets y
 1. From the AWS Console, ensure you are using the us-west-2 (Oregon) region, and then select Cloud9 under Services.
 ![](/image/select_cloud9.png)
 
-2. Create an IDE environment. After that, click Open IDE.
+2. Create an IDE environment. Suggest you to select **m5.large** instance type for this workshop. After that, click Open IDE.
 
 3. Once your Cloud9 environment is loaded, the recommendation is to change the theme to AWS Cloud9 Classic Dark Theme, but you can set your own preferences.
 ![](/image/cloud9_theme.png)
