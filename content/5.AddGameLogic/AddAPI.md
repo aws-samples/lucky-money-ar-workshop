@@ -28,7 +28,7 @@ amplify add api
 ![](/images/addGameLogic/amplify-add-api-3.png)
 
 1. Replace the schema in **schema.graphql** with the following code and **save** schema.graphql
-```graphql
+{{< highlight graphql >}}
 type Advertisement @model(subscriptions: null) @key(fields: ["ProductType"]){
   ProductType: String!
   ADContent: String
@@ -66,7 +66,12 @@ input CreateUserInput {
   Group: String! = "AKO2020"
   Balance: Int = 0
 }
-```
+{{< /highlight >}}
+
+1. Make sure you save the schema.graphql file and then run `amplify push` to push our changes into AWS. Leave the default responses for the next set of questions.
+
+Once you get through all the questions, deployment will start. This will take a few minutes. When complete, you will receive the GraphQL endpoint information in the terminal window. This endpoint is now accessible by an authenticated user.
+![](/images/addGameLogic/appsync_endpoint.png)
 
 {{% notice note %}}
 Notice the @ signs in this schema? The Amplify framework supports these GraphQL annotations - which are directives that tell amplify to configure our AppSync API in a certain way:</br>
@@ -75,11 +80,6 @@ Notice the @ signs in this schema? The Amplify framework supports these GraphQL 
 @auth - creates fields identifying access control and the appropriate query controls</br>
 To learn more about these, check out https://aws-amplify.github.io/docs/cli-toolchain/graphql#directives
 {{% /notice %}}
-
-Make sure you save the schema.graphql file and then run `amplify push` to push our changes into AWS. Leave the default responses for the next set of questions.
-
-Once you get through all the questions, deployment will start. This will take a few minutes. When complete, you will receive the GraphQL endpoint information in the terminal window. This endpoint is now accessible by an authenticated user.
-![](/images/addGameLogic/appsync_endpoint.png)
 
 ## Add DynamoDB data
 
@@ -94,7 +94,7 @@ Once you get through all the questions, deployment will start. This will take a 
   * Password
 
 1. We need to add some product data so we don’t have an empty **Advertisement** table. To do this, paste in the following set of queries and then press the **Orange Play** button.
-```graphql
+{{< highlight graphql >}}
 mutation {
   # Create the Advertisement
   createAdvertisement(input:{
@@ -113,10 +113,25 @@ mutation {
     ProductDescription
   }
 }
-```
+{{< /highlight >}}
 
 ![](/images/addGameLogic/insert-ads.png)
 
 This will load our initial advertisement data - you should see successful logs in the right hand column of the AppSync query console.
 
-Now that we have a backend data store and an API layer to access it, let’s put it into our application.
+## Update Lambda Environment 
+
+The lambda function will need to access our datasource, we set through Lambda Environment. Update using the following code, and replace **${env}**, **${region}**, **${user_pool_id}** and **${appsync_id}** with your own value.
+
+{{< highlight bash >}}
+aws lambda update-function-configuration \
+--function-name LuckyMoneyFunction-${env} \
+--environment Variables="{env=${env}, REGION=${region}, COGNITO_USER_POOL_ID=${user_pool_id}, APPSYNC_ID=${appsync_id}}"
+{{< /highlight >}}
+
+* **${env}**: Amplify environment, use `amplify status` to check. If you followed this workshop, it should be `dev`
+* **${region}**: AWS region. If you followed this workshop, it should be `us-west-2`
+* **${user_pool_id}**: Cognito User Pool Id. Find it in **src/aws-exports.js**
+![](/images/addGameLogic/user_pool_id.png?width=30pc)
+* **${appsync_id}**: AppSync ID. Find it in **amplify/amplify-meta.json**
+![](/images/addGameLogic/amplify-meta.png?width=30pc)

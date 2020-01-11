@@ -19,7 +19,7 @@ weight: 22
 1. Click **Add Component**, choose **State Machine**.    
    ![](/images/addSumerian/add-component.png)   
    
-   ![](/image/WechatIMG8.png)   sel
+   ![](/image/WechatIMG8.png)
 
 1. Click the **+ button**  to add behavior.     
    ![](/image/WechatIMG11.png)
@@ -64,7 +64,7 @@ weight: 22
 
 #### Red Packet with Money 
 
-1. Click the **LuckyMoneyWithCash** entity.   
+1. Click the **LuckyMoneyWithCash** entity in the left side **Entities** Panel  
 
 1. Click **Add Component** button, choose **State Machine**    
 
@@ -97,7 +97,7 @@ weight: 22
 
 1. Create another state by click **+ Add State**, name it `ExeShareScript`.
 
-1. Add another action **Execute Script**. Click the **+ button** to add script, choose **Custom (Legacy Format)**. 
+1. Add action **Execute Script** for the state. Click the **+ button** to add script, choose **Custom (Legacy Format)**. 
 
 1. Click the **pencil** button to edit script, copy the following codes into the function **enter**, then **save** the change.
 
@@ -128,14 +128,21 @@ The steps are similar to **Share Button**. So repeat the steps **Share Button**,
    ![](/images/addSumerian/hide-cash.png)
 
 
-## Set AR Camera
+## Configure AR Camera
 
 1. Find the main AR Camera using the left navigation bar
 
 1. Change the **Z** value of position to `2` and save the scene
-
 ![](/images/addSumerian/change-camera.png)
+
+1. Delete the **Default Camera** from the entities panel
+![](/images/addSumerian/delete-default-camera.png)
+
+1. Delete the **AR Camera** which is **NOT** the main camera
+![](/images/addSumerian/delete-ar-camera.png)
 
 ## Conclusion
 Congratulations! You have completed the sumerian settings. So far, we cannot test the final effects as it has not been integrated with our application yet. In the next session, we will create a React web application.
+
+Leave the Sumerian Console open, open a new tab to access AWS Console. We will come back to the Sumerian console later.
 

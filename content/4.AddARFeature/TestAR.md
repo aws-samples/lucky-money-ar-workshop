@@ -11,7 +11,7 @@ You will need to test the AR feature on mobile device.
 Open the Amplify domain on your mobile. You can also use [QRCode Generator](https://www.the-qrcode-generator.com/) to convert the domain into QRCode and scan using the Camera application on mobile device.
 
 1. Login into the application using your credentials
-1. Click the AR button on top right corner
+1. Click the **AR** button on top right corner
 1. When asked for camera permission, click **Allow**
 1. Scan the following **target image** using camera
 ![](/images/cola.png?width=30pc)
