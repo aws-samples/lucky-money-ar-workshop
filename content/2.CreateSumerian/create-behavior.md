@@ -59,7 +59,7 @@ weight: 22
 
     ![](/image/script-save-change.png)
 
-1. Click the **wait for click** state, drag a line from **On Click/Tap Entity** to **hide** state.
+1. The 'wait for click' and 'hide' states are now **overlapped** in the same position. Use the mouse to **move the hide state around**. Then Click the **wait for click** state, drag a line from **On Click/Tap Entity** to **hide** state.
    ![](/images/addSumerian/script-drag-line.png)
 
 #### Red Packet with Money 
@@ -114,7 +114,10 @@ weight: 22
 
 #### Close Button
 
-The steps are similar to **Share Button**. So repeat the steps **Share Button**, change all the names from **shate** to **close**, and use the following codes instead of the previous one in **edit script**.
+For close button part, the steps are pretty much the same with **Share Button** except the naming. So **repeat** the steps from **Share Button** part except **replacing** all the names containing **share** with **close**.
+
+Examples include renaming 'ListenForClickShare' to **ListenForClickClose**, renaming 'ExeShareScript' to **ExeCloseScript** and so on.
+Also, use the following codes instead of the previous one in **edit script**.
 
 {{< highlight javascript >}}
     window.postMessage('sumerian-close-packet','*');
@@ -124,7 +127,7 @@ The steps are similar to **Share Button**. So repeat the steps **Share Button**,
 ![](/images/addSumerian/script-drag-line-4.png)
 
 ## Config Default Hidden
-1. Click the eye button on the left console, the corresponding entity will be disappear.
+1. Click the **eye button** on the left console, the corresponding entity (lucky money with cash) will disappear.
    ![](/images/addSumerian/hide-cash.png)
 
 
