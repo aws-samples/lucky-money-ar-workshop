@@ -32,7 +32,7 @@ amplify push
 ```
 1. When prompted to complete the changes. Enter `Y` and the deployment will begin
 1. You will see the updating progress, wait for this progress finished. This will take a few minutes.
-![]()
+
 
 ## Update Authentication to web APP
 

@@ -11,7 +11,7 @@ AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets y
 {{% /notice  %}}
 
 ## Create IDE environment
-1. From the AWS Console, ensure you are using the us-west-2 (Oregon) region, and then select Cloud9 under Services.
+1. From the AWS Console, ensure you are using  **us-west-2 (Oregon)** region, and then select Cloud9 under Services.
 ![](/image/select_cloud9.png)
 
 2. Create an IDE environment. Suggest you to select **m5.large** instance type for this workshop. After that, click Open IDE.
