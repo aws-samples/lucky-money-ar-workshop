@@ -48,7 +48,7 @@ Amplify.configure(Aws_exports)
 {{< /highlight >}}
   ![](/images/reactApp/amplify_imports.png?width=40pc)
 
-* Wrap the web application with build-in **Authenticator** 
+* Wrap the web application with build-in **Authenticator**. Replace the origin export with the following code.
 {{< highlight javascript >}}
 export default withAuthenticator(withRouter(App));
 {{< /highlight >}}

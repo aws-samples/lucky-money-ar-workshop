@@ -9,9 +9,9 @@ In this step, we will create the stub of the application. This will include the 
 
 The following components will be created:
 
-* src/components/AR.js - displays the AR scene created in Amazon Sumerian  
-* src/components/Sharing.js - displays the lucky money shared from the user's friends
-* src/components/Ranking.js - displays user's lucky money balance and a ranking list, the friends with the highest balance are dislayed at the top
+* **src/components/AR.js** - displays the AR scene created in Amazon Sumerian  
+* **src/components/Sharing.js** - displays the lucky money shared from the user's friends
+* **src/components/Ranking.js** - displays user's lucky money balance and a ranking list, the friends with the highest balance are dislayed at the top
 
 ## Create React Components and download assets
 
@@ -210,7 +210,7 @@ export default Ranking
 {{< /highlight >}}
 
 
-1. Update **src/components/Sharing.js**
+1. Replace **src/components/Sharing.js** with the following code.
 
 {{< highlight javascript >}}
 import React from 'react'
@@ -339,7 +339,7 @@ class Sharing extends React.Component {
 export default Sharing
 {{< /highlight >}}
 
-1. Update **src/App.js**
+1. Edit **src/App.js** and replace it with the following code
 
 {{< highlight javascript >}}
 import React from 'react';
@@ -465,7 +465,7 @@ export default withRouter(App);
 {{< /highlight >}}
 
 
-1. Update **src/index.js**
+1. Edit **src/index.js** and replace with the following code
 
 {{< highlight javascript >}}
 import React from 'react';

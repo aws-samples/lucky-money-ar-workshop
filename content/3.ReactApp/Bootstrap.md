@@ -6,8 +6,8 @@ weight: 31
 
 We will now create the React Application. This will include the following components:
 
-* src/index.js - The entry point of React application
-* src/App.js - the single page application
+* **src/index.js** - The entry point of React application
+* **src/App.js** - the single page application
 
 ## Create the React APP
 
