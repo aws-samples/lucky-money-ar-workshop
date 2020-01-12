@@ -18,9 +18,8 @@ weight: 22
 
 1. Click **Add Component**, choose **State Machine**.    
    ![](/images/addSumerian/add-component.png)   
-   
    ![](/image/WechatIMG8.png)
-
+   
 1. Click the **+ button**  to add behavior.     
    ![](/image/WechatIMG11.png)
 
@@ -88,7 +87,7 @@ weight: 22
 
 #### Share Button
 
-1. Click the **Share Btn** entity, click **Add Component**, and select **State Machine**.
+1. In the left side **Entities** panel, Click **Share Btn** entity, click **Add Component**, and select **State Machine**.
 
 1. Create a behavior, name both the **behavior name** and the **state name** `ListenForClickShare`.
     ![](/image/share-button-behaviors.png)
