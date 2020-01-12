@@ -5,9 +5,14 @@ weight: 21
 ---
 
 
+{{% notice tip %}}
+We will use **us-west-2(Oregon)** region throughout the workshop. Make sure you choose the right region 
+{{% /notice %}}
+
+
 ## Create a new Sumerian Scene
 
-1. Go to [Amazon Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start)
+1. Go to [Amazon Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start) in us-west-2.
 
 1. Under **Create scene from template**, choose **Augmented Reality**.
    ![](/image/WechatIMG4_1.png)

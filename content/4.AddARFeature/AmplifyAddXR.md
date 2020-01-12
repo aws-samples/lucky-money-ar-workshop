@@ -6,14 +6,18 @@ weight: 41
 
 ## Load 8th Wall
 
-1. Open your [8th Wall Console](https://www.8thwall.com/), and find your project create in previous steps. Sign in if you have not login yet.
-1. Click the **Setting Button** on the left navigation bar, and find **MY APP KEY**
-![](/images/addAR/8th_app_key.png)
-1. Go back to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value.
+1. Go to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value.
 ```html
     <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY"></script>
 ```
 ![](/images/addAR/8th_header.png)
+
+- If you didn't copy the key before and don't know where to find it, here are the steps.
+   1. Open your [8th Wall Console](https://www.8thwall.com/), and find your project create in previous steps.
+   1. Click the **Setting Button** on the left navigation bar, and find **MY APP KEY**
+   ![](/images/addAR/8th_app_key.png)
+
+  
 
 
 ## Export Sumerian configuration file
@@ -28,8 +32,8 @@ weight: 41
 
 ## Add AR Feature to Amplify Project
 
-1. Upload the Sumerian configuration file to Cloud9, and put in project root directory. You can drag and upload the file. 
-1. Rename the file from **sumerian_exports_xxxxx.json** to `sumerian_exports.json`
+1. Rename the Sumerian JSON configuration file from **sumerian_exports_xxxxx.json** to `sumerian_exports.json`
+1. Upload the Sumerian configuration file to Cloud9, put it in **project root directory** (under `ako2020-lucky-money`). You can drag and upload the file. 
 1. Run the following command to add AR feature
 ```bash
 # change  to the project's root directory
@@ -149,6 +153,13 @@ class AR extends React.Component {
 export default withAuthenticator(AR);
 
 {{< /highlight >}}
+
+
+{{% notice warning %}}
+If you paste the above code with the vim editor, due to vim features, a large part of the code may be commented in a wrong way. 
+Please double check the ``async loadAndStartScene()`` function part to see if it matches the example codes above.
+{{% /notice %}}
+
 
 {{% notice note %}}
 You will need a mobile device to test the AR feature.

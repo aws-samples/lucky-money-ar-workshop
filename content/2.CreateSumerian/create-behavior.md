@@ -135,11 +135,13 @@ Also, use the following codes instead of the previous one in **edit script**.
 
 1. Find the main AR Camera using the left navigation bar
 
-1. Change the **Z** value of position to `2` and save the scene
+1. Change the **Z** value of position to `2`
 ![](/images/addSumerian/change-camera.png)
+
+1. **Save** the scene through ``Scene`` tab on the left top of Sumerian. 
 
 ## Conclusion
 Congratulations! You have completed the sumerian settings. So far, we cannot test the final effects as it has not been integrated with our application yet. In the next session, we will create a React web application.
 
-Leave the Sumerian Console open, open a new tab to access AWS Console. We will come back to the Sumerian console later.
+You could leave the Sumerian Console open, open a new tab to access AWS Console. We will come back to the Sumerian console later.
 

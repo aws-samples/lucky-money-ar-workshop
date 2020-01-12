@@ -55,7 +55,7 @@ We have create the AWS backend using Amplify CLI. Now we only use the AWS Amplif
   * **Type**: `200(Rewrite)`
 ![](/images/addAR/amplify_rewrites.png)
 
-The deployment will take a few minutes to complete. You can find the link under **Domain**.
+The deployment will take a few minutes to complete. You can find the amplify domain link under **Domain**.
 ![](/images/addAR/amplify_link.png)
 
 ## Troubleshooting
@@ -74,10 +74,10 @@ Follow the steps to fix this issue:
 1. Select **General** on the left navigation bar, and click the **Edit** button
 ![](/images/addAR/amplify_update_edit.png)
 1. Update the **Service role**, and click **Save** button
-1. On the left navigation bar, select the Amplify project, select connected branch
+1. On the left navigation bar, select the Amplify project, click **master** to enter the connected branch.
 1. Click the **Redeploy this version** button
 ![](/images/addAR/amplify_redeploy.png)
-
+1. After the deployment, you will get the ``domain`` link.
 
 
 
