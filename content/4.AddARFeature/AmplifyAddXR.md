@@ -11,7 +11,7 @@ weight: 41
 ![](/images/addAR/8th_app_key.png)
 1. Go back to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value.
 ```html
-    <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY></script>
+    <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY"></script>
 ```
 ![](/images/addAR/8th_header.png)
 
@@ -51,13 +51,23 @@ amplify push
 ## Add AR Feature to web APP
 
 Open **src/components/AR.js**, and replace with the following code
-```javascript
+{{< highlight javascript >}}
 import React from 'react'
+import { withAuthenticator } from 'aws-amplify-react'
+import {XR as awsXR, Auth} from 'aws-amplify'
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
-import { XR as awsXR } from 'aws-amplify'
+import './Toast.css'
 
 class AR extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      user: {},
+      toastText: "aaaaaa"
+    }
+  }
+
   render() {
     return (
       <div>
@@ -74,16 +84,31 @@ class AR extends React.Component {
         <div id="sumerian-scene-dom-id" style={ {height: '100vh'} }>
             <p id="loading-status">Loading...</p>
           </div>
+        <div id="snackbar">{this.state.toastText}</div>
       </div>
     );
   }
+
 
   moveToMain() {
     window.location.href = "/";
   };
 
   componentDidMount() {
+    const self = this
     this.loadAndStartScene();
+    
+    Auth.currentUserInfo().then(user => {
+      this.setState({user: user})
+    })
+
+    var showToast = function(){
+      let script = document.createElement('script')
+      script.setAttribute("id","snackbar-script")
+      if (document.getElementById('snackbar-script') != null) document.getElementById('snackbar-script').remove();
+      script.text = 'var x = document.getElementById("snackbar");x.className = "show";setTimeout(function() {x.className = x.className.replace("show", "");}, 3000);'
+      document.getElementById('snackbar').appendChild(script)
+    }
   }
 
   async loadAndStartScene() {
@@ -107,15 +132,26 @@ class AR extends React.Component {
 
     window.XR8.Sumerian.addXRWebSystem(world);
 
+    window.sumerian.SystemBus.addListener('doshare', () => {
+      // Add error handling here
+      console.log ('DoShare is clicked');
+    });
+
+    window.sumerian.SystemBus.addListener('doclose', () => {
+      // Add error handling here
+      console.log ('DoClose is clicked');
+    });
+
     awsXR.start('LuckyMoneyAR');
   }
 };
 
-export default AR;
-``` 
+export default withAuthenticator(AR);
+
+{{< /highlight >}}
 
 {{% notice note %}}
 You will need a mobile device to test the AR feature.
-{{% notice note %}}
+{{% /notice %}}
 
 So far, you have added AR feature to the web application. In the next session, we will deploy this web application via AWS Amplify Console.
