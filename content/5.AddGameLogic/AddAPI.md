@@ -11,6 +11,7 @@ Using Amplify, we are going to deploy an [AWS AppSync API](https://aws.amazon.co
 
 1. Run the following command to add an API:
 ```
+cd ~/environment/ako2020-lucky-money
 amplify add api
 ```
 
@@ -68,7 +69,7 @@ input CreateUserInput {
 }
 {{< /highlight >}}
 
-1. Make sure you save the schema.graphql file and then run `amplify push` to push our changes into AWS. Leave the default responses for the next set of questions.
+1. Make sure you save the schema.graphql file and then run `amplify push` to push our changes into AWS. Leave the **default responses** for the next set of questions. 
 
 Once you get through all the questions, deployment will start. This will take a few minutes. When complete, you will receive the GraphQL endpoint information in the terminal window. This endpoint is now accessible by an authenticated user.
 ![](/images/addGameLogic/appsync_endpoint.png)
@@ -83,10 +84,12 @@ To learn more about these, check out https://aws-amplify.github.io/docs/cli-tool
 
 ## Add DynamoDB data
 
-1. Open the file **src/aws-exports.js** and find the **aws_user_pools_web_client_id** value. Copy the value as you will need it for the next step:
+1. Open the file **src/aws-exports.js** and find the **aws_user_pools_web_client_id**,  **user_pool_id** value. Save the values somewhere, you will need it for the next steps.
 ![](/images/addGameLogic/copy_web_client_id.png)
 
-2. visit the [AWS AppSync console](https://console.aws.amazon.com/appsync/home), Click on the name of your API.
+![](/images/addGameLogic/user_pool_id.png?width=30pc)
+
+2. visit the [AWS AppSync console](https://us-west-2.console.aws.amazon.com/appsync/home), Click on the name of your API.
 
 3. Select **Queries** from the left column, and then click **Login with User Pools**, and then enter the following values, and click **Login**
   * ClientId: enter the value you copied for **aws_user_pools_web_client_id**
@@ -121,7 +124,9 @@ This will load our initial advertisement data - you should see successful logs i
 
 ## Update Lambda Environment 
 
-The lambda function will need to access our datasource, we set through Lambda Environment. Update using the following code, and replace **${env}**, **${region}**, **${user_pool_id}** and **${appsync_id}** with your own value.
+The lambda function will need to access our datasource, we set through Lambda Environment. 
+
+Replace **${env}**, **${region}**, **${user_pool_id}** and **${appsync_id}** with your own value and Update using the following code.
 
 {{< highlight bash >}}
 aws lambda update-function-configuration \
@@ -129,9 +134,9 @@ aws lambda update-function-configuration \
 --environment Variables="{env=${env}, REGION=${region}, COGNITO_USER_POOL_ID=${user_pool_id}, APPSYNC_ID=${appsync_id}}"
 {{< /highlight >}}
 
-* **${env}**: Amplify environment, use `amplify status` to check. If you followed this workshop, it should be `dev`
-* **${region}**: AWS region. If you followed this workshop, it should be `us-west-2`
-* **${user_pool_id}**: Cognito User Pool Id. Find it in **src/aws-exports.js**
-![](/images/addGameLogic/user_pool_id.png?width=30pc)
-* **${appsync_id}**: AppSync ID. Find it in **amplify/amplify-meta.json**
+* **env**: If you followed this workshop instructions, it should be `dev`. You could also use `amplify status` to check. 
+* **region**: AWS region. If you followed this workshop, it should be `us-west-2`.
+* **user_pool_id**: Cognito User Pool Id. You should already get it in the last step. If not, find it in **src/aws-exports.js**
+* **appsync_id**: AppSync ID. Find it in **amplify/backend/amplify-meta.json**
+
 ![](/images/addGameLogic/amplify-meta.png?width=30pc)

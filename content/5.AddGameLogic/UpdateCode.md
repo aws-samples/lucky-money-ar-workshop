@@ -4,24 +4,27 @@ chapter: false
 weight: 53
 ---
 
+{{% notice note %}}
+You could either update codes automatically or manually. **Choose either one** instead of both.  
+{{% /notice %}}
+
+
 ## Update Code Automatically
 
 You can update your code to include the changes, the following scripts will overwrite your changes.
 
 {{< highlight bash >}}
+cd ~/environment/ako2020-lucky-money/
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/AR.js -O ./src/components/AR.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Ranking.js -O ./src/components/Ranking.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Sharing.js -O ./src/components/Sharing.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/App.js -O ./src/App.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/index.js -O ./src/index.js
-
 {{< /highlight >}}
 
-## Code Changes explanation
+## (Optional) Update codes Manually
 
-{{% notice note %}}
-You don't need to copy and paste the following code again. You have downloaded using the above scripts.
-{{% /notice %}}
+You **DO NOT** need to copy and paste the following code again if you have already downloaded and updated the codes using the above scripts.
 
 update **src/App.js**
 {{< highlight javascript >}}
