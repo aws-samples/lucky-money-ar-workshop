@@ -54,12 +54,10 @@ We have create the AWS backend using Amplify CLI. Now we only use the AWS Amplif
   * **Target address**: `/index.html`
   * **Type**: `200(Rewrite)`
 ![](/images/addAR/amplify_rewrites.png)
+1. If the deployment fails, follow the below **Troubleshooting** instructions to fix.
 
-The deployment will take a few minutes to complete. You can find the amplify domain link under **Domain**.
-![](/images/addAR/amplify_link.png)
 
 ## Troubleshooting
-
 You may encounter the following building error. Follow the error message and click the **Re-authenticate app** button will **NOT** fix this issue.
 ![](/images/addAR/amplify_build_error.png)
 
@@ -77,8 +75,8 @@ Follow the steps to fix this issue:
 1. On the left navigation bar, select the Amplify project, click **master** to enter the connected branch.
 1. Click the **Redeploy this version** button
 ![](/images/addAR/amplify_redeploy.png)
-1. After the deployment, you will get the ``domain`` link.
-
+1. After the deployment, You can find the amplify domain link under **Domain**.
+![](/images/addAR/amplify_link.png)
 
 
 

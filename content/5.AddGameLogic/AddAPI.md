@@ -84,7 +84,7 @@ To learn more about these, check out https://aws-amplify.github.io/docs/cli-tool
 
 ## Add DynamoDB data
 
-1. Open the file **src/aws-exports.js** and find the **aws_user_pools_web_client_id**,  **user_pool_id** value. Save the values somewhere, you will need it for the next steps.
+1. Open the file **src/aws-exports.js** and find the **aws_user_pools_web_client_id**,  **aws_user_pools_id** value. Save the values somewhere, you will need it for the next steps.
 ![](/images/addGameLogic/copy_web_client_id.png)
 
 ![](/images/addGameLogic/user_pool_id.png?width=30pc)
