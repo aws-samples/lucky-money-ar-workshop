@@ -107,15 +107,15 @@ weight: 22
 
     ![](/image/share-button-save-script.png)
 
-1. Drag a line from **On Click/Tap Entity** action under **ListenForClickShare** state to **ExeShareScipt** state
+1. The two states are now overlapped together. Move the mouse to move one state around and then **drag a line** from **ListenForClickShare** state to **ExeShareScipt** state.
     ![](/images/addSumerian/script-drag-line-3.png)
 
 
 #### Close Button
+For close button part, the steps are pretty much the same with **Share Button** except **button chosen and the naming**. So repeat the steps from **Share Button** part except choosing **close btn** instead and **replacing** all the names containing **share** with **close**.
+![](/images/addSumerian/close-btn.png)
 
-For close button part, the steps are pretty much the same with **Share Button** except the naming. So **repeat** the steps from **Share Button** part except **replacing** all the names containing **share** with **close**.
-
-Examples include renaming 'ListenForClickShare' to **ListenForClickClose**, renaming 'ExeShareScript' to **ExeCloseScript** and so on.
+Naming examples include renaming 'ListenForClickShare' to `ListenForClickClose`, renaming 'ExeShareScript' to `ExeCloseScript` and so on.
 Also, use the following codes instead of the previous one in **edit script**.
 
 {{< highlight javascript >}}
@@ -123,6 +123,8 @@ Also, use the following codes instead of the previous one in **edit script**.
     ctx.transitions.success();
 {{< /highlight >}}
 
+The ListenForClickClose and ExeCloseScript are now **overlapped** in the same position. Use the mouse to **move one state around**.
+Then drag a line from **On Click/Tap Entity** to **hide** state.
 ![](/images/addSumerian/script-drag-line-4.png)
 
 ## Config Default Hidden
@@ -132,7 +134,9 @@ Also, use the following codes instead of the previous one in **edit script**.
 
 ## Configure AR Camera
 
-1. Find the main AR Camera using the left navigation bar
+1. There are two AR Cameras displaying in left navigation bar. Find the **main AR Camera**.
+The right info bar displays if that's the main camera. 
+![](/images/addSumerian/main-camera.png)
 
 1. Change the **Z** value of position to `2`
 ![](/images/addSumerian/change-camera.png)

@@ -55,6 +55,10 @@ amplify push
 ## Add AR Feature to web APP
 
 Open **src/components/AR.js**, and replace with the following code
+{{% notice warning %}}
+**[IMPORTANT]**  If you paste the following code with the vim editor, be sure to run ``:set paste`` before you paste, otherwise a large part of the code will be commented automatically in a wrong way. 
+{{% /notice %}}
+
 {{< highlight javascript >}}
 import React from 'react'
 import { withAuthenticator } from 'aws-amplify-react'
@@ -153,12 +157,6 @@ class AR extends React.Component {
 export default withAuthenticator(AR);
 
 {{< /highlight >}}
-
-
-{{% notice warning %}}
-If you paste the above code with the vim editor, due to vim features, a large part of the code may be commented in a wrong way. 
-Please double check the ``async loadAndStartScene()`` function part to see if it matches the example codes above.
-{{% /notice %}}
 
 
 {{% notice note %}}

@@ -35,7 +35,8 @@ wget {{< param codeRepo >}}raw/master/public/images/redpacket.png -O public/imag
 
 ## Update React Component 
 
-1. Edit the **src/component/Toast.css** and replace the contents with the following code, save the file
+1. Run ``cd src/component``. There are four files in this folder. We will update them one by one.
+1. Edit the **Toast.css**. Replace the contents with the following code, save the file
 {{< highlight css >}}
 #snackbar {
     visibility: hidden;
@@ -105,9 +106,7 @@ wget {{< param codeRepo >}}raw/master/public/images/redpacket.png -O public/imag
     }
 }
 {{< /highlight >}}
-
-1. Edit the **src/components/AR.js** file and replace the contents with the following code, save the file. 
-
+1. Edit the **AR.js** file and replace the contents with the following code, save the file. 
 {{< highlight javascript >}}
 import React from 'react'
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
@@ -151,11 +150,8 @@ class AR extends React.Component {
 };
 
 export default AR;
-
 {{< /highlight >}}
-
-1. Edit the **src/components/Ranking.js** file and replace the contents with the following code, save the file 
-
+1. Edit the **Ranking.js** file and replace the contents with the following code, save the file
 {{< highlight javascript >}}
 import React from 'react'
 import { List, ListItem, ListItemText } from '@material-ui/core';
@@ -208,10 +204,7 @@ class Ranking extends React.Component {
 
 export default Ranking
 {{< /highlight >}}
-
-
-1. Replace **src/components/Sharing.js** with the following code.
-
+1. Replace **Sharing.js** with the following code.
 {{< highlight javascript >}}
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
@@ -338,9 +331,7 @@ class Sharing extends React.Component {
 
 export default Sharing
 {{< /highlight >}}
-
-1. Edit **src/App.js** and replace it with the following code
-
+1. Run ``cd ..`` to go the **src** folder. Edit **App.js** and replace it with the following code
 {{< highlight javascript >}}
 import React from 'react';
 import './App.css';
@@ -463,10 +454,10 @@ const App=({location}) => {
 
 export default withRouter(App);
 {{< /highlight >}}
-
-
-1. Edit **src/index.js** and replace with the following code
-
+1. Edit **index.js** under **src** and replace with the following code.    
+{{% notice warning %}}
+**[Important]** If you use VIM to paste, be sure to run ``:set paste`` before you paste the following code otherwise part of the codes will be commented automatically.
+{{% /notice %}}
 {{< highlight javascript >}}
 import React from 'react';
 import ReactDOM from 'react-dom';
