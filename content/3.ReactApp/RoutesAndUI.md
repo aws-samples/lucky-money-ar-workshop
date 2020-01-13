@@ -35,7 +35,7 @@ wget {{< param codeRepo >}}raw/master/public/images/redpacket.png -O public/imag
 
 ## Update React Component 
 
-1. Run ``cd src/component``. There are four files in this folder. We will update them one by one.
+1. Run ``cd src/components``. There are four files in this folder. We will update them one by one.
 1. Edit the **Toast.css**. Replace the contents with the following code, save the file
 {{< highlight css >}}
 #snackbar {
