@@ -32,7 +32,7 @@ amplify push
 ```
 1. When prompted to complete the changes. Enter `Y` and the deployment will begin
 1. You will see the updating progress, wait for this progress finished. This will take a few minutes.
-![]()
+
 
 ## Update Authentication to web APP
 
@@ -48,7 +48,7 @@ Amplify.configure(Aws_exports)
 {{< /highlight >}}
   ![](/images/reactApp/amplify_imports.png?width=40pc)
 
-* Wrap the web application with build-in **Authenticator** 
+* Wrap the web application with build-in **Authenticator**. Replace the origin export with the following code.
 {{< highlight javascript >}}
 export default withAuthenticator(withRouter(App));
 {{< /highlight >}}

@@ -6,30 +6,25 @@ weight: 14
 
 ## Create 8th wall project
 
-1. Open [8th Wall](https://www.8thwall.com/), and login with your own account
+1. Open [8th Wall](https://www.8thwall.com/), register a new account and and log in with it. 
 
-1. After authenticated,  click "Start a new Project"     
-![](/image/8th-wall-console-workspace-start-project.jpg)
-
-2. Select the workspace for this project     
-
-3. Enter Basic info for the project: Please provide a Title, URL, Description (optional) and Cover Image (optional). All of these fields, except URL, can be edited later in the Project Settings page.      
-
-4. Select a Project Type. In this workshop, we will use **Non-Commercial** License.
-![](/image/8th-wall-gettingstarted-new-project-info.jpg)
+1. After authenticated,  click "Start a new Project" with a name
+![](/images/introduction/create-8th-project.png)  
 
 ## Upload image target to 8th Wall
 
-The image target is a product image. Once it found the target from the camera streaming, it will render 3D content.
+8th Wall Web can detect and track 2D image files, allowing you to bring static content to life.
+
+In this workshop, the image target is the product(coke cola) image. It will render 3D content Once it found the target from the camera streaming.
 
 {{%attachments title="Image Targets" pattern=".*(png)"/%}}
 
 1. Download the above images to your local desktop
 
-1. Click the Image Target icon in the left navigation or the "Manage Image Targets" link on the Project Dashboard
+1. Click the Image Target icon in the left navigation or the **Manage Image Targets** link on the Project Dashboard
 ![](/image/8th-wall-console-appkey-imagetargets.jpg)
 
-1. Drag your image (.jpg, .jpeg or .png) to the "Upload Image" panel, or click "Upload Image" and use your file browser to select your image. Make sure you **meet all the requirements for the target image** which are listed below
+1. Drag your image ( .jpg, .jpeg or .png ) to the **Upload Image** panel, or click **Upload Image** and use your file browser to select your image. 
 
 1. On the Image Target Upload screen, set orientation and use the zoom slider to select region of interest
 
@@ -56,7 +51,7 @@ Projects created on the Free plan may not be viewed publicly. Device authorizati
 {{% /notice  %}}
 
 1. Go back to the Project Dashboard and click **Device Authorization** to expand the device authorization pane.
-![](/images/introduction/8th-wall-device-authorization.png)
+![](/images/introduction/device-authorization.png)
 
 1. Authorize your device. **Scan** the QRCode with your mobile and **open the website**
 ![](/image/8th-console-developer-mode-qr.jpg)
@@ -67,4 +62,4 @@ Projects created on the Free plan may not be viewed publicly. Device authorizati
 
 1. Click **Settings** on the left navigation bar
 
-1. Copy the **MY APP KEY** and paste to somewhere, you will need this key in later steps.
+1. Copy the **MY APP KEY** and save it for later steps where you will need the key.

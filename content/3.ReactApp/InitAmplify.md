@@ -20,7 +20,7 @@ cd ~/environment/ako2020-lucky-money
 amplify init
 ```
 1. For the name of the project, you can use the default name. For the **environment name**, enter `dev`
-1. For the **default editor**, you can choose `None`, accept all the default values. Amplify CLI attempts to identify the application and programming frameworks that you are using. Typcially this means that the correct values are already selected. 
+1. For the **default editor**, you can choose **`None`**, accept all the default values. Amplify CLI attempts to identify the application and programming frameworks that you are using. Typcially this means that the correct values are already selected. 
 ![](/images/reactApp/amplify_init.png)
 1. When asked choose the **profile** you want to use, select `default`
 ![](/images/reactApp/amplify_profile.png)
