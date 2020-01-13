@@ -11,20 +11,19 @@ Otherwise, it's highly recommended for you to read and thinking about this befor
 
 ## Use Scenario 
 
-This workshop will deliver an application for users to do AR scanning to earn red packets and share red packets with each other, whose profit model is mobile online advertising. 
+This workshop will deliver an application for users to earn lucky money in red packets by AR scanning and share red packets with others, whose profit model is mobile online advertising.
 
-There are two types of roles in this scenario, advertisers, application owner, and users.
+There are two roles in this application, advertisers and users.
 
-* The advertiser (such as coca-cola drink, Mcdonald's, etc) would invest a certain amount of money in Red Packet inventory with the purpose of promoting their products. 
+* The advertisers (such as Coca-Cola, McDonald’s, etc) would invest a certain amount of money in the Red Packet inventory with the purpose of promoting their products.
 
-* Application owner will help distributing the advertisement using AR Lucky Money. 
+* Users can scan some symbols on physical objects to get a red packet, which contains a random amount of lucky money (2 USD for example) inside with the advertiser’s logo and name.
 
-* Users in this application could scan some physical products (or logos) to get a red packet, 
-which contains random value of lucky money (2 USD for example) inside with the advertiser's logo and name.
+In the red packet distribution process, the application will select a advertiser to pay the lucky money, and post advertisements of the selected advertiser.
+To get the lucky money, users can open the red packet and see the advertisement right after they get a red packet by AR scanning. 
+In addition, we provide another option that can better promote advertisers' products and achieve viral marketing. In this option, users are encouraged to share the red packet with others (like friends, family) to get extra bonus. By such sharing, one red packet will be opened multiple times with corresponding advertisements being seen multiple times.
 
-To get the money, the user will open the red packet directly to get a random amount of money, and see the advertisement. To better promote the product and to create viral marketing. The users are encouraged to share the lucky money with friends, family and they are get some bonus. One shared lucky money can be opened multiple times, and the first served users can get random value of lucky money. 
-
-In real world, users could withdraw the money to his or her own bank accounts to get the real money after gaining the digital money from the red packets. 
+In real world, users can withdraw the money to their own bank accounts to get the real money from the red packets.
 
 ## Business Requirements
 

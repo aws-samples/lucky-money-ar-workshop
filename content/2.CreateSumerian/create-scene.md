@@ -5,9 +5,14 @@ weight: 21
 ---
 
 
+{{% notice tip %}}
+We will use **us-west-2(Oregon)** region throughout the workshop. Make sure you choose the right region 
+{{% /notice %}}
+
+
 ## Create a new Sumerian Scene
 
-1. Go to [Amazon Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start)
+1. Go to [Amazon Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start) in us-west-2.
 
 1. Under **Create scene from template**, choose **Augmented Reality**.
    ![](/image/WechatIMG4_1.png)
@@ -27,7 +32,6 @@ weight: 21
 
 1. In the left side **Assets** panel, click file icon and choose the template file **template-bundle.zip** we prepare to upload **without unzipping** it. The zip file contains images of package and money.
 ![](/image/WechatIMG5.png) 
-
 {{% notice warning %}}
 If you see any errors, please double check you are uploading **ZIP file** directly instead of unzipping files.
 {{% /notice %}}

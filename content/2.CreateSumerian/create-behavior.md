@@ -18,9 +18,8 @@ weight: 22
 
 1. Click **Add Component**, choose **State Machine**.    
    ![](/images/addSumerian/add-component.png)   
-   
    ![](/image/WechatIMG8.png)
-
+   
 1. Click the **+ button**  to add behavior.     
    ![](/image/WechatIMG11.png)
 
@@ -59,7 +58,7 @@ weight: 22
 
     ![](/image/script-save-change.png)
 
-1. Click the **wait for click** state, drag a line from **On Click/Tap Entity** to **hide** state.
+1. The 'wait for click' and 'hide' states are now **overlapped** in the same position. Use the mouse to **move the hide state around**. Then Click the **wait for click** state, drag a line from **On Click/Tap Entity** to **hide** state.
    ![](/images/addSumerian/script-drag-line.png)
 
 #### Red Packet with Money 
@@ -88,7 +87,7 @@ weight: 22
 
 #### Share Button
 
-1. Click the **Share Btn** entity, click **Add Component**, and select **State Machine**.
+1. In the left side **Entities** panel, Click **Share Btn** entity, click **Add Component**, and select **State Machine**.
 
 1. Create a behavior, name both the **behavior name** and the **state name** `ListenForClickShare`.
     ![](/image/share-button-behaviors.png)
@@ -108,35 +107,44 @@ weight: 22
 
     ![](/image/share-button-save-script.png)
 
-1. Drag a line from **On Click/Tap Entity** action under **ListenForClickShare** state to **ExeShareScipt** state
+1. The two states are now overlapped together. Move the mouse to move one state around and then **drag a line** from **ListenForClickShare** state to **ExeShareScipt** state.
     ![](/images/addSumerian/script-drag-line-3.png)
 
 
 #### Close Button
+For close button part, the steps are pretty much the same with **Share Button** except **button chosen and the naming**. So repeat the steps from **Share Button** part except choosing **close btn** instead and **replacing** all the names containing **share** with **close**.
+![](/images/addSumerian/close-btn.png)
 
-The steps are similar to **Share Button**. So repeat the steps **Share Button**, change all the names from **shate** to **close**, and use the following codes instead of the previous one in **edit script**.
+Naming examples include renaming 'ListenForClickShare' to `ListenForClickClose`, renaming 'ExeShareScript' to `ExeCloseScript` and so on.
+Also, use the following codes instead of the previous one in **edit script**.
 
 {{< highlight javascript >}}
     window.postMessage('sumerian-close-packet','*');
     ctx.transitions.success();
 {{< /highlight >}}
 
+The ListenForClickClose and ExeCloseScript are now **overlapped** in the same position. Use the mouse to **move one state around**.
+Then drag a line from **On Click/Tap Entity** to **hide** state.
 ![](/images/addSumerian/script-drag-line-4.png)
 
 ## Config Default Hidden
-1. Click the eye button on the left console, the corresponding entity will be disappear.
+1. Click the **eye button** on the left console, the corresponding entity (lucky money with cash) will disappear.
    ![](/images/addSumerian/hide-cash.png)
 
 
 ## Configure AR Camera
 
-1. Find the main AR Camera using the left navigation bar
+1. There are two AR Cameras displaying in left navigation bar. Find the **main AR Camera**.
+The right info bar displays if that's the main camera. 
+![](/images/addSumerian/main-camera.png)
 
-1. Change the **Z** value of position to `2` and save the scene
+1. Change the **Z** value of position to `2`
 ![](/images/addSumerian/change-camera.png)
+
+1. **Save** the scene through ``Scene`` tab on the left top of Sumerian. 
 
 ## Conclusion
 Congratulations! You have completed the sumerian settings. So far, we cannot test the final effects as it has not been integrated with our application yet. In the next session, we will create a React web application.
 
-Leave the Sumerian Console open, open a new tab to access AWS Console. We will come back to the Sumerian console later.
+You could leave the Sumerian Console open, open a new tab to access AWS Console. We will come back to the Sumerian console later.
 
