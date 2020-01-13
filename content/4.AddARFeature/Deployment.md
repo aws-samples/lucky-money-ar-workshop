@@ -7,33 +7,33 @@ weight: 42
 ## Create CodeCommit Repositories
 
 1. Run the following command in Cloud9 to create CodeCommit repositories
-```bash
+{{< highlight bash >}}
 aws codecommit create-repository --repository-name ako2020-lucky-money
-```
+{{< /highlight >}}
 
 1. Run the following commands to configure the AWS CLI credential helper for HTTPS connections:
-```bash
+{{< highlight bash >}}
 git config --global credential.helper '!aws codecommit credential-helper $@'
 git config --global credential.UseHttpPath true
-```
+{{< /highlight >}}
 
 ## Push changes to CodeCommit
 
 1. Commit the changes 
-```bash
+{{< highlight bash >}}
 # Commit added files
 git add -f src/aws-exports.js
 git add .gitignore package-lock.json package.json public/index.html src/App.js src/index.js amplify/ public/images/ src/components/
 git commit -m "initial commit"
-```
+{{< /highlight >}}
 
 1. Add CodeCommit remote origin, and push to CodeCommit
-```bash
+{{< highlight bash >}}
 # Add remote origin
 git remote add origin https://git-codecommit.us-west-2.amazonaws.com/v1/repos/ako2020-lucky-money
 # Push to origin master branch
 git push --set-upstream origin master
-```
+{{< /highlight >}}
 ![](/images/addAR/git_push.png)
 
 ## Configure AWS Amplify Console
