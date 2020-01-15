@@ -161,7 +161,7 @@ const App=({location}) => {
 export default withAuthenticator(withRouter(App), { includeGreetings: false });
 {{< /highlight >}}
 
-update `src/component/Ranking.js`
+update `src/components/Ranking.js`
 {{< highlight javascript >}}
 import React from 'react'
 import { withAuthenticator } from 'aws-amplify-react';

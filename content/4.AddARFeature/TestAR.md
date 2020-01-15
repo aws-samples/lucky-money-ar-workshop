@@ -22,5 +22,9 @@ If you don't want to type it, you can also use [QRCode Generator](https://www.th
 1. You should be able to see the AR Red Packet on your mobile device
 ![](/images/introduction/real-ar.jpeg?width=20pc)
 
+   > If you cannot see the AR Red Packet on your screen, go to the 8th wall website, choose your project and check if the picture is uploaded automatically. If not, click 'edit' button on the picture to choose this checkbox.
+   
+   ![](/images/addAR/loaded-automatically.png) 
+
 Now, you have successfully added AR feature to the application. However, it still short of business logic. In the next chapter, we will add some APIs and business logic for this web application.
 

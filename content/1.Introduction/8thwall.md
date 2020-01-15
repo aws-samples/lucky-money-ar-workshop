@@ -32,7 +32,8 @@ In this workshop, the image target is the product(coke cola) image. It will rend
 
 1. Click **Upload**
 
-1. Select **Load automatically**
+1. Make sure that **Load automatically** is selected
+![](/images/introduction/load-automatically.png)
 
 1. Click **Save**
 ![](/images/introduction/image-targets.png?width=30pc)

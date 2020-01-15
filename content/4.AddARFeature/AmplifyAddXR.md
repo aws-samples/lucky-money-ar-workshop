@@ -6,7 +6,7 @@ weight: 41
 
 ## Load 8th Wall
 
-1. Go to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value.
+1. Go to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value. Remember to **save the file** before you move on.
 ```html
     <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY"></script>
 ```
@@ -18,8 +18,6 @@ weight: 41
    ![](/images/addAR/8th_app_key.png)
 
   
-
-
 ## Export Sumerian configuration file
 
 1. Open [Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start), select your created Sumerian Scene
