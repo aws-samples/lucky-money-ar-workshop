@@ -8,6 +8,7 @@ weight: 42
 
 1. Run the following command in Cloud9 to create CodeCommit repositories
 {{< highlight bash >}}
+cd ~/environment/ako2020-lucky-money/
 aws codecommit create-repository --repository-name ako2020-lucky-money
 {{< /highlight >}}
 
@@ -18,10 +19,10 @@ git config --global credential.UseHttpPath true
 {{< /highlight >}}
 
 ## Push changes to CodeCommit
-
 1. Commit the changes 
 {{< highlight bash >}}
 # Commit added files
+cd ~/environment/ako2020-lucky-money/
 git add -f src/aws-exports.js
 git add .gitignore package-lock.json package.json public/index.html src/App.js src/index.js amplify/ public/images/ src/components/
 git commit -m "initial commit"
@@ -54,8 +55,8 @@ We have create the AWS backend using Amplify CLI. Now we only use the AWS Amplif
   * **Target address**: `/index.html`
   * **Type**: `200(Rewrite)`
 ![](/images/addAR/amplify_rewrites.png)
-1. If the deployment fails, follow the below **Troubleshooting** instructions to fix.
-
+1. Click the **master branch** to find the deployment status. If it shows build fails, follow the below **Troubleshooting** instructions to fix.
+   ![](/images/addGameLogic/amplify-master.png)
 
 ## Troubleshooting
 You may encounter the following building error. Follow the error message and click the **Re-authenticate app** button will **NOT** fix this issue.

@@ -34,18 +34,23 @@ weight: 22
 1. Click **Add State** and change the **state name** to `hide`   
    ![](/image/WechatIMG15.png)
    
-1. Click **Add Action**. Find and add **Hide**   
+1. Next We will add **three actions** to state ``hide``. Firstly, Click **Add Action**,  find **Hide** to add.
+   ![](/images/addSumerian/add-action-for-hide.png)
    ![](/image/WechatIMG19.png)
 
-1. Add another action. Click **Add Action** and add **Emit Message**   
+1. Add another action for ``hide``. Click **Add Action** and add **Emit Message**   
+   ![](/images/addSumerian/add-action-for-hide.png)
    ![](/image/WechatIMG21.png)
 
-1. In the **channel**, enter `showMoney`      
+1. In the **channel** for ``hide``, enter `showMoney`      
    ![](/image/WechatIMG23.png)
 
-1. Add another action **Execute Script**. Click the **+** button to add script, choose **Custom (Legacy Format)**. 
+1. Add the 3rd action **Execute Script** for ``hide`` state. 
+    ![](/images/addSumerian/add-action-for-hide.png)
+    ![](/images/addSumerian/execute-script.png)
+    
+1. Click the **+ button** to add script, choose **Custom (Legacy Format)**. 
     ![](/image/script-create-script.png)
-
     ![](/image/script-choose-type.png)
 
 1. Click the **pencil** button to edit script, copy the following codes into the function **enter**, then save the change.
@@ -134,11 +139,14 @@ Then drag a line from **On Click/Tap Entity** to **hide** state.
 
 ## Configure AR Camera
 
-1. There are two AR Cameras displaying in left navigation bar. Find the **main AR Camera**.
-The right info bar displays if that's the main camera. 
+1. There are two AR Cameras displaying in left navigation bar. 
+   ![](/images/addSumerian/two-cameras.png)
+   
+1. Click one of them and choose **Camera** tab to find the **main AR Camera**.
+The right info bar displays if that's the main camera or not. 
 ![](/images/addSumerian/main-camera.png)
 
-1. Change the **Z** value of position to `2`
+1. Change the main camera's **Z** value of position to `2`
 ![](/images/addSumerian/change-camera.png)
 
 1. **Save** the scene through ``Scene`` tab on the left top of Sumerian. 
