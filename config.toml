@@ -1,0 +1,43 @@
+baseURL = "https://lucky-money.lab798.com/"
+ignoreFiles = [ "\\.files/README.md$",  ]
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Lucky Money AR Workshop"
+theme = "hugo-theme-learn"
+uglyurls = false
+sectionPagesMenu = "main"
+relativeURLs = true
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  editURL = "https://github.com/aws-samples/lucky-money-ar-workshop/edit/master/content/"
+  themeVariant = "mine"
+  showVisitedLinks = false
+  author = "Joe SHI<qiaoshi@amazon.com>"
+  description = "Learn how to build AR web application using Amazon Sumerian, AWS Amplify"
+  disableSearch = false
+  disableAssetsBusting = false
+  disableShortcutsTitle = true
+  branch = "master"
+  pygmentsUseClasses = true
+  pygmentsCodeFences = true
+  pygmentsCodefencesGuessSyntax = true
+  pygmentsStyle = "tango"
+  codeRepoName = "JoeShi/lucky-money-code"
+
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> GitHub Project"
+url = "https://github.com/aws-samples/lucky-money-ar-workshop"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-envelope'></i> Have questions?"
+url = "https://github.com/aws-samples/lucky-money-ar-workshop/issues"
+weight = 40
+
+[outputs]
+home = [ "HTML", "JSON"]
+page = [ "HTML" ]
