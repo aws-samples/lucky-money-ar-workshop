@@ -8,11 +8,13 @@ weight: 42
 
 1. Run the following command in Cloud9 to create CodeCommit repositories
 {{< highlight bash >}}
+cd ~/environment/ako2020-lucky-money
 aws codecommit create-repository --repository-name ako2020-lucky-money
 {{< /highlight >}}
 
 1. Run the following commands to configure the AWS CLI credential helper for HTTPS connections:
 {{< highlight bash >}}
+cd ~/environment/ako2020-lucky-money
 git config --global credential.helper '!aws codecommit credential-helper $@'
 git config --global credential.UseHttpPath true
 {{< /highlight >}}
@@ -22,6 +24,7 @@ git config --global credential.UseHttpPath true
 1. Commit the changes 
 {{< highlight bash >}}
 # Commit added files
+cd ~/environment/ako2020-lucky-money
 git add -f src/aws-exports.js
 git add .gitignore package-lock.json package.json public/index.html src/App.js src/index.js amplify/ public/images/ src/components/
 git commit -m "initial commit"
