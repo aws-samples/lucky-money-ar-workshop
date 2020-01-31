@@ -19,9 +19,9 @@ The command to revert to react-scripts version 3.2.0 is due to a security error 
 
 ```
 # Create the initial app
-npx create-react-app ako2020-lucky-money
+npx create-react-app lucky-money-ar-workshop
 # Revert to react-scripts version 3.2.0 due to security error with Cloud9 and 3.3.0
-cd ako2020-lucky-money
+cd lucky-money-ar-workshop
 npm i react-scripts@3.2.0
 ```
 

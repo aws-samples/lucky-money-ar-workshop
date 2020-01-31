@@ -17,7 +17,7 @@ The following components will be created:
 
 Run the following commands to create some files, and download necessary assets:
 {{< highlight shell >}}
-cd ~/environment/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
 # create components folder
 mkdir src/components/
 # create components files
@@ -28,14 +28,14 @@ touch src/components/Toast.css
 # create assets folder
 mkdir public/images
 # download the lucky money image
-wget {{< param codeRepo >}}raw/master/public/images/red_envolope.jpg -O public/images/red_envolope.jpg
-wget {{< param codeRepo >}}raw/master/public/images/redpacket.png -O public/images/redpacket.png
+wget https://github.com/{{< param codeRepoName >}}/raw/master/public/images/red_envolope.jpg -O public/images/red_envolope.jpg
+wget https://{{< param codeRepoName >}}/raw/master/public/images/redpacket.png -O public/images/redpacket.png
 
 {{< /highlight >}}
 
 ## Update React Component 
 
-1. Run ``cd src/component``. There are four files in this folder. We will update them one by one.
+1. Run ``cd src/components``. There are four files in this folder. We will update them one by one.
 1. Edit the **Toast.css**. Replace the contents with the following code, save the file
 {{< highlight css >}}
 #snackbar {

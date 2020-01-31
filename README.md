@@ -1,7 +1,12 @@
-# AKO2020 - Lucky Money AR Application Workshop
+# Lucky Money AR Application Workshop
 
-Welcome AKO2020 Lucky Money AR Application Workshp
+Welcome to Lucky Money AR Application Workshop. 
 
+At [Lunar New Year](https://en.wikipedia.org/wiki/Chinese_New_Year), it’s a tradition to give [Red Packets](https://en.wikipedia.org/wiki/Red_envelope) as the gifts to your friends and family. There are filled with lucky money and is a symbol of blessings for good luck in the new year. As Internet has developed fast in the past few years, nowadays, comparing with cash, Chinese people prefer sending virtual red packets over the Internet during the Lunar New Year. Tens of billions of red packets are sent via this way every year.
+
+In this workshop, you will learn how to add an Argumented Reality(AR) Red Packet feature to your application using **Amazon Sumerian**, **AWS Amplify**, **Amazon Cognito**, **AWS AppSync**, **Amazon DynamoDB** and etc.
+
+Visit [https://lucky-money.lab798.com](https://lucky-money.lab798.com/) to getting started with the workshop.
 
 ## Setup:
 
@@ -20,12 +25,12 @@ On Linux:
 
 #### Clone this repo:
 From wherever you checkout repos:
-`git clone git@github.com:joeshi/ako2020-lucky-money.git` (or your fork)
+`git clone git@github.com:aws-samples/lucky-money-ar-workshop.git` (or your fork)
 
 #### Clone the theme submodule:
 
 ```shell script
-cd ako2020-lucky-money
+cd lucky-money-ar-workshop
 git submodule init
 git submodule update
 ```
@@ -40,5 +45,10 @@ Run `hugo` will build your content locally and output to `./public/`
 
 This sample code is made available under the MIT-0 license. See the LICENSE file.
 
+## Contributor
 
-
+[@JoeShi](https://github.com/joeshi/), 
+[@go4real](https://github.com/go4real/),
+[@fanyizhe](https://github.com/fanyizhe/), 
+[@salander0411](https://github.com/salander0411/), 
+[@yuan00yuan](https://github.com/yuan00yuan/)

@@ -14,7 +14,7 @@ You could either update codes automatically or manually. **Choose either one** i
 You can update your code to include the changes, the following scripts will overwrite your changes.
 
 {{< highlight bash >}}
-cd ~/environment/ako2020-lucky-money/
+cd ~/environment/lucky-money-ar-workshop/
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/AR.js -O ./src/components/AR.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Ranking.js -O ./src/components/Ranking.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Sharing.js -O ./src/components/Sharing.js
@@ -161,7 +161,7 @@ const App=({location}) => {
 export default withAuthenticator(withRouter(App), { includeGreetings: false });
 {{< /highlight >}}
 
-update `src/component/Ranking.js`
+update `src/components/Ranking.js`
 {{< highlight javascript >}}
 import React from 'react'
 import { withAuthenticator } from 'aws-amplify-react';

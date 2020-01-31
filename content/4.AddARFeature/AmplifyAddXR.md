@@ -6,7 +6,7 @@ weight: 41
 
 ## Load 8th Wall
 
-1. Go to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value.
+1. Go to Cloud9, open **public/index.html**, copy paste the following code and place in **\<header\>** tag. Replace the **APP_KEY** with your own value. Remember to **save the file** before you move on.
 ```html
     <script async src="https://apps.8thwall.com/xrweb?appKey=APP_KEY"></script>
 ```
@@ -18,8 +18,6 @@ weight: 41
    ![](/images/addAR/8th_app_key.png)
 
   
-
-
 ## Export Sumerian configuration file
 
 1. Open [Sumerian Console](https://us-west-2.console.aws.amazon.com/sumerian/home/start), select your created Sumerian Scene
@@ -33,11 +31,11 @@ weight: 41
 ## Add AR Feature to Amplify Project
 
 1. Rename the Sumerian JSON configuration file from **sumerian_exports_xxxxx.json** to `sumerian_exports.json`
-1. Upload the Sumerian configuration file to Cloud9, put it in **project root directory** (under `ako2020-lucky-money`). You can drag and upload the file. 
+1. Upload the Sumerian configuration file to Cloud9, put it in **project root directory** (under `lucky-money-ar-workshop`). You can drag and upload the file. 
 1. Run the following command to add AR feature
 ```bash
 # change  to the project's root directory
-cd ~/environment/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
 amplify add xr
 ```
 1. Press **Enter** when ready

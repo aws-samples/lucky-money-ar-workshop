@@ -15,7 +15,7 @@ Amplify is an opinionated framework. To make relevant and automated decisions, t
 1. Run the following command to initilize an empty Amplify project
 ```bash
 # Change to the React project directory
-cd ~/environment/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
 # Initialize the project configuration for Amplify
 amplify init
 ```

@@ -11,7 +11,7 @@ Using Amplify, we are going to deploy an [AWS AppSync API](https://aws.amazon.co
 
 1. Run the following command to add an API:
 ```
-cd ~/environment/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
 amplify add api
 ```
 

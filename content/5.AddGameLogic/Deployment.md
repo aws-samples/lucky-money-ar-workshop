@@ -8,7 +8,7 @@ weight: 54
 
 Run the following code to push changes to CodeCommit.
 ```bash
-cd ~/environment/ako2020-lucky-money/
+cd ~/environment/lucky-money-ar-workshop/
 # Git Add
 git add amplify/backend/backend-config.json \
 public/images/red_envolope.jpg \

@@ -8,23 +8,22 @@ weight: 42
 
 1. Run the following command in Cloud9 to create CodeCommit repositories
 {{< highlight bash >}}
-cd ~/environment/ako2020-lucky-money
-aws codecommit create-repository --repository-name ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
+aws codecommit create-repository --repository-name lucky-money-ar-workshop
 {{< /highlight >}}
 
 1. Run the following commands to configure the AWS CLI credential helper for HTTPS connections:
 {{< highlight bash >}}
-cd ~/environment/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
 git config --global credential.helper '!aws codecommit credential-helper $@'
 git config --global credential.UseHttpPath true
 {{< /highlight >}}
 
 ## Push changes to CodeCommit
-
 1. Commit the changes 
 {{< highlight bash >}}
 # Commit added files
-cd ~/environment/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
 git add -f src/aws-exports.js
 git add .gitignore package-lock.json package.json public/index.html src/App.js src/index.js amplify/ public/images/ src/components/
 git commit -m "initial commit"
@@ -33,7 +32,8 @@ git commit -m "initial commit"
 1. Add CodeCommit remote origin, and push to CodeCommit
 {{< highlight bash >}}
 # Add remote origin
-git remote add origin https://git-codecommit.us-west-2.amazonaws.com/v1/repos/ako2020-lucky-money
+cd ~/environment/lucky-money-ar-workshop
+git remote add origin https://git-codecommit.us-west-2.amazonaws.com/v1/repos/lucky-money-ar-workshop
 # Push to origin master branch
 git push --set-upstream origin master
 {{< /highlight >}}
@@ -43,10 +43,10 @@ git push --set-upstream origin master
 
 We have create the AWS backend using Amplify CLI. Now we only use the AWS Amplify Console to deploy the frontend environment.
 
-1. Go to [Amplify Console](https://us-west-2.console.aws.amazon.com/amplify/home?region=us-west-2#/), select the Amplify project, it should be named **ako2020-lucky-money**
+1. Go to [Amplify Console](https://us-west-2.console.aws.amazon.com/amplify/home?region=us-west-2#/), select the Amplify project, it should be named **lucky-money-ar-workshop**
 1. Select **AWS CodeCommit** as the source code Git provider, and click **Connect branch**
 ![](/images/addAR/amplify_codecommit.png)
-1. Select **ako2020-lucky-money** from the repositories, and **master** branch, click **Next** to continue
+1. Select **lucky-money-ar-workshop** from the repositories, and **master** branch, click **Next** to continue
 ![](/images/addAR/amplify_codecommit_select.png)
 1. **Unselect** the checkbox before **Deploy updates to backend resources with your frontend on every code commit**
 ![](/images/addAR/amplify_ignore_backend.png)
@@ -57,8 +57,8 @@ We have create the AWS backend using Amplify CLI. Now we only use the AWS Amplif
   * **Target address**: `/index.html`
   * **Type**: `200(Rewrite)`
 ![](/images/addAR/amplify_rewrites.png)
-1. If the deployment fails, follow the below **Troubleshooting** instructions to fix.
-
+1. Click the **master branch** to find the deployment status. If it shows build fails, follow the below **Troubleshooting** instructions to fix.
+   ![](/images/addGameLogic/amplify-master.png)
 
 ## Troubleshooting
 You may encounter the following building error. Follow the error message and click the **Re-authenticate app** button will **NOT** fix this issue.
