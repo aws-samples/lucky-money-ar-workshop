@@ -47,7 +47,8 @@ This library is licensed under the MIT-0 License. See the LICENSE file.
 
 ## Contributor
 
-[@JoeShi](https://github.com/joeshi/), 
+[@JoeShi](https://github.com/joeshi/),
+[@mengweivictor](https://github.com/mengweivictor),
 [@go4real](https://github.com/go4real/),
 [@fanyizhe](https://github.com/fanyizhe/), 
 [@salander0411](https://github.com/salander0411/), 
