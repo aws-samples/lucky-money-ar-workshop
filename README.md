@@ -8,6 +8,10 @@ In this workshop, you will learn how to add an Argumented Reality(AR) Red Packet
 
 Visit [https://lucky-money.lab798.com](https://lucky-money.lab798.com/) to getting started with the workshop.
 
+<img src="static/images/1.gif" alt="drawing" style="width:200px;"/>
+
+<img src="static/images/2.gif" alt="drawing" style="width:200px;"/>
+
 ## Setup:
 
 The workshop website is built on [Hugo](https://gohugo.io/). You do **NOT** need to 

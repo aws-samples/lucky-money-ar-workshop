@@ -6,11 +6,12 @@ weight: 1
 
 <div style="text-align: center"><h2>Lucky Money AR Application Workshop</h2></div>
 
-{{% notice note %}}
-If you are attending AKO443153, you have a chance to win a special **Red Packet** with **embroidery** and **gold**.
+{{% notice info %}}
+It will take ~2 hours to complete the workshop.
 {{% /notice  %}}
 
-![](/images/introduction/lucky-money-mouse.jpg)
+![](/images/1.gif?width=300px)
+![](/images/2.gif?width=300px)
 
 At [Lunar New Year](https://en.wikipedia.org/wiki/Chinese_New_Year), it's a tradition to give [Red Packets](https://en.wikipedia.org/wiki/Red_envelope) as the gifts to your friends and family. There are filled with lucky money and is a symbol of blessings for good luck in the new year. 
 As Internet has developed fast in the past few years, nowadays, comparing with cash, Chinese people prefer sending virtual red packets over the Internet during the Lunar New Year. Tens of billions of red packets are sent via this way every year.
@@ -26,3 +27,8 @@ Technically speaking, we will mainly learn the following aspects throughout the 
 * Integrate Amplify with Sumerian
 * Build CI/CD for modern applicaiton with AWS Amplify Console
  
+{{% notice note %}}
+If you are attending AKO443153, you have a chance to win a special **Red Packet** with **embroidery** and **gold**.
+{{% /notice  %}}
+
+![](/images/introduction/lucky-money-mouse.jpg)

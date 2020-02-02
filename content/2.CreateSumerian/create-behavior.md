@@ -10,9 +10,6 @@ weight: 22
 
 ####  Red Packet 
 
-1. On the left side **Entities** panel, DELETE **Default Camera**.
-    ![](/images/addSumerian/add-behaviors-delete-default-camera.png)
-
 1.  Select the **LuckyMoney** entity
     ![](/images/addSumerian/add-behaviors-select-packet.png)
 
@@ -64,7 +61,7 @@ weight: 22
     ![](/image/script-save-change.png)
 
 1. The 'wait for click' and 'hide' states are now **overlapped** in the same position. Use the mouse to **move the hide state around**. Then Click the **wait for click** state, drag a line from **On Click/Tap Entity** to **hide** state.
-   ![](/images/addSumerian/script-drag-line.png)
+   ![](/images/addSumerian/script-drag-line.gif)
 
 #### Red Packet with Money 
 
@@ -139,6 +136,9 @@ Then drag a line from **On Click/Tap Entity** to **hide** state.
 
 ## Configure AR Camera
 
+1. On the left side **Entities** panel, DELETE **Default Camera**.
+    ![](/images/addSumerian/add-behaviors-delete-default-camera.png)
+
 1. There are two AR Cameras displaying in left navigation bar. 
    ![](/images/addSumerian/two-cameras.png)
    
@@ -149,7 +149,9 @@ The right info bar displays if that's the main camera or not.
 1. Change the main camera's **Z** value of position to `2`
 ![](/images/addSumerian/change-camera.png)
 
-1. **Save** the scene through ``Scene`` tab on the left top of Sumerian. 
+1. **Save** the scene through **Scene** tab on the left top of Sumerian.
+
+1. (Optional) Delete the AR Camera which is NOT the main camera.
 
 ## Conclusion
 Congratulations! You have completed the sumerian settings. So far, we cannot test the final effects as it has not been integrated with our application yet. In the next session, we will create a React web application.

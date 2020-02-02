@@ -20,6 +20,7 @@ wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/com
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/components/Sharing.js -O ./src/components/Sharing.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/App.js -O ./src/App.js
 wget https://raw.githubusercontent.com/{{< param codeRepoName >}}/master/src/index.js -O ./src/index.js
+
 {{< /highlight >}}
 
 ## (Optional) Update codes Manually

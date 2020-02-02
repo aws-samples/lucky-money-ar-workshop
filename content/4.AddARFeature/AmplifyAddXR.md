@@ -40,7 +40,7 @@ amplify add xr
 ```
 1. Press **Enter** when ready
 1. For **Provide a name for the scene**, input `LuckyMoneyAR`
-1. For **Enter the path to the downloaded JSON configuration fil**, input `./sumerian_exports.json`
+1. For **Enter the path to the downloaded JSON configuration file**, input `./sumerian_exports.json`
 1. Select **N** when asked whether allow unauthenticated users access to the Sumerian project
 ![](/images/addAR/amplify_add_xr.png)
 1. Push changes to AWS
